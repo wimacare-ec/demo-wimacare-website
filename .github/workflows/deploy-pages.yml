@@ -20,6 +20,7 @@ jobs:
     env:
       SITE_URL: https://wimacare-ec.github.io
       ASTRO_BASE: /demo-wimacare-website
+      TINA_BASE_PATH: demo-wimacare-website
       PUBLIC_TINA_CLIENT_ID: ${{ secrets.PUBLIC_TINA_CLIENT_ID }}
       TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
       TINA_BRANCH: main

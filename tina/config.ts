@@ -14,6 +14,9 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "public",
+    // GitHub Pages publishes this site below /demo-wimacare-website/.
+    // Leave this empty for local development and custom-domain deployments.
+    basePath: process.env.TINA_BASE_PATH || "",
   },
   media: {
     tina: {
