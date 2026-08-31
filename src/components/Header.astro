@@ -1,5 +1,8 @@
 ---
+import { sitePath, withoutBase } from "@/lib/site-path";
+
 const { pathname = "/" } = Astro.props;
+const currentPath = withoutBase(pathname);
 const primaryNav = [
   ["關於我們", "/about/"],
   ["產品介紹", "/products/"],
@@ -11,16 +14,16 @@ const salesNav = [
   ["官方商城", "/eshop/"],
   ["成為零售夥伴", "/dealer/"],
 ];
-const salesNavActive = salesNav.some(([, href]) => pathname.startsWith(href));
+const salesNavActive = salesNav.some(([, href]) => currentPath.startsWith(href));
 ---
 
 <a class="skip-link" href="#main-content">跳至主要內容</a>
 <header class="site-header">
   <div class="site-header-shell">
-    <a class="header-brand" href="/" aria-label="威馬康健首頁">
+    <a class="header-brand" href={sitePath("/")} aria-label="威馬康健首頁">
       <img
         class="header-brand-logo"
-        src="/wimacare-logo.png"
+        src={sitePath("/wimacare-logo.png")}
         alt="威馬康健 WIMA CARE"
         width="800"
         height="340"
@@ -31,7 +34,7 @@ const salesNavActive = salesNav.some(([, href]) => pathname.startsWith(href));
     </button>
     <nav id="main-nav" class="main-nav" aria-label="主要導覽">
       {primaryNav.map(([label, href]) => (
-        <a href={href} aria-current={pathname.startsWith(href) ? "page" : undefined}>{label}</a>
+        <a href={sitePath(href)} aria-current={currentPath.startsWith(href) ? "page" : undefined}>{label}</a>
       ))}
       <div class:list={["nav-dropdown", { "is-current": salesNavActive }]}>
         <button
@@ -45,14 +48,14 @@ const salesNavActive = salesNav.some(([, href]) => pathname.startsWith(href));
         </button>
         <div id="sales-channel-submenu" class="nav-submenu" role="group" aria-label="銷售通路子選單">
           {salesNav.map(([label, href]) => (
-            <a href={href} aria-current={pathname.startsWith(href) ? "page" : undefined}>{label}</a>
+            <a href={sitePath(href)} aria-current={currentPath.startsWith(href) ? "page" : undefined}>{label}</a>
           ))}
         </div>
       </div>
-      <a href="/contact/" aria-current={pathname.startsWith("/contact/") ? "page" : undefined}>聯絡我們</a>
+      <a href={sitePath("/contact/")} aria-current={currentPath.startsWith("/contact/") ? "page" : undefined}>聯絡我們</a>
     </nav>
     <a class="header-shop" href="https://line.me/R/ti/p/@910mkdxc" target="_blank" rel="noreferrer">
-      <img src="/assets/line-icon.png" alt="" width="1001" height="1000" aria-hidden="true" />
+      <img src={sitePath("/assets/line-icon.png")} alt="" width="1001" height="1000" aria-hidden="true" />
       <span>線上客服</span>
     </a>
   </div>

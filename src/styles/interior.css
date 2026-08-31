@@ -99,7 +99,7 @@
   align-items: center;
   background-image:
     linear-gradient(90deg, color-mix(in srgb, #fff 96%, transparent) 0%, color-mix(in srgb, #fff 88%, transparent) 56%, color-mix(in srgb, var(--brand-surface) 58%, transparent) 100%),
-    url("/page-hero-waves.png");
+    url("../page-hero-waves.png");
   background-position: center, center bottom;
   background-size: cover;
 }

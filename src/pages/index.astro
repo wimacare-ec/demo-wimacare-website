@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import NewsCard from "@/components/NewsCard.astro";
+import { sitePath } from "@/lib/site-path";
 import "../styles/home.css";
 
 const news = (await getCollection("news", ({ data }) => !data.draft))
@@ -38,11 +39,11 @@ const brands = [
 ];
 
 const purchaseChannels = [
-  ["森日藥局", "/channels/senri-pharmacy.svg"],
-  ["安心健康", "/channels/ansin-health.svg"],
-  ["康禾生活", "/channels/kanghe-life.svg"],
-  ["好鄰保健", "/channels/neighbor-care.svg"],
-  ["樂活藥妝", "/channels/lohas-drugstore.svg"],
+  ["森日藥局", sitePath("/channels/senri-pharmacy.svg")],
+  ["安心健康", sitePath("/channels/ansin-health.svg")],
+  ["康禾生活", sitePath("/channels/kanghe-life.svg")],
+  ["好鄰保健", sitePath("/channels/neighbor-care.svg")],
+  ["樂活藥妝", sitePath("/channels/lohas-drugstore.svg")],
 ];
 ---
 
@@ -55,8 +56,8 @@ const purchaseChannels = [
           <h1 id="home-hero-title">把專業健康，<br />說得更<em>清楚。</em></h1>
           <p class="home-lede">集結瑞士專家團隊的研發實力與 cGMP 藥廠級工廠品質，為台灣大眾與素食族群量身打造保健配方。</p>
           <div class="home-hero-actions">
-            <a class="home-button home-button-primary" href="/products/">探索產品 <span aria-hidden="true">&gt;&gt;</span></a>
-            <a class="home-button home-button-outline" href="/about/">認識威馬康健 <span aria-hidden="true">→</span></a>
+            <a class="home-button home-button-primary" href={sitePath("/products/")}>探索產品 <span aria-hidden="true">&gt;&gt;</span></a>
+            <a class="home-button home-button-outline" href={sitePath("/about/")}>認識威馬康健 <span aria-hidden="true">→</span></a>
           </div>
         </div>
 
@@ -105,7 +106,7 @@ const purchaseChannels = [
               <div class="home-brand-card-copy">
                 <h3>{brand.title}</h3>
                 <p>{brand.description}</p>
-                <a href="/products/">查看系列 <span aria-hidden="true">→</span></a>
+                <a href={sitePath("/products/")}>查看系列 <span aria-hidden="true">→</span></a>
               </div>
             </article>
           ))}
@@ -135,7 +136,7 @@ const purchaseChannels = [
             <p class="home-eyebrow"><span></span>LATEST UPDATES</p>
             <h2 id="home-news-title">最新消息</h2>
           </div>
-          <a class="home-text-link" href="/news/">查看全部消息 <span aria-hidden="true">→</span></a>
+          <a class="home-text-link" href={sitePath("/news/")}>查看全部消息 <span aria-hidden="true">→</span></a>
         </div>
         <div class="news-grid">{news.map((entry) => <NewsCard entry={entry} />)}</div>
       </div>
@@ -148,7 +149,7 @@ const purchaseChannels = [
             <p class="home-eyebrow"><span></span>HEALTH KNOWLEDGE</p>
             <h2 id="home-knowledge-title">健康知識</h2>
           </div>
-          <a class="home-text-link" href="/knowledge/">查看全部健康知識 <span aria-hidden="true">→</span></a>
+          <a class="home-text-link" href={sitePath("/knowledge/")}>查看全部健康知識 <span aria-hidden="true">→</span></a>
         </div>
         <div class="news-grid">{knowledge.map((entry) => <NewsCard entry={entry} basePath="/knowledge" />)}</div>
       </div>
@@ -185,7 +186,7 @@ const purchaseChannels = [
           <h2 id="home-contact-title">有產品、通路或合作問題？</h2>
           <p>請留下您的需求，我們將盡快回覆您。</p>
         </div>
-        <a class="home-button home-button-light" href="/contact/">聯絡我們 <span aria-hidden="true">→</span></a>
+        <a class="home-button home-button-light" href={sitePath("/contact/")}>聯絡我們 <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </div>

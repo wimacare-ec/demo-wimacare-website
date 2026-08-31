@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { sitePath } from "@/lib/site-path";
 import PageHero from "@/components/PageHero.astro";
 ---
 
@@ -41,7 +42,7 @@ import PageHero from "@/components/PageHero.astro";
   <section class="cta-band">
     <div class="shell cta-grid">
       <div><h2>準備好成為零售夥伴嗎？</h2><p>請至聯絡頁選擇「成為零售客戶」，留下您的相關資訊。</p></div>
-      <a class="button" href="/contact/#contact-form">申請成為零售夥伴 →</a>
+      <a class="button" href={sitePath("/contact/#contact-form")}>申請成為零售夥伴 →</a>
     </div>
   </section>
 </BaseLayout>

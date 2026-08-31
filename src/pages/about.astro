@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHero from "@/components/PageHero.astro";
+import { sitePath } from "@/lib/site-path";
 ---
 
 <BaseLayout title="關於我們｜威馬康健" description="認識威馬康健的品牌故事、素食保健理念、專業研發團隊與品質承諾。" pageClass="interior-page about-page">
@@ -9,7 +10,7 @@ import PageHero from "@/components/PageHero.astro";
   <section class="section about-intro">
     <div class="shell">
       <figure class="about-lead-visual">
-        <img src="/about/brand-hero.jpg" alt="威馬康健純素科學與精準營養品牌理念" />
+        <img src={sitePath("/about/brand-hero.jpg")} alt="威馬康健純素科學與精準營養品牌理念" />
       </figure>
       <div class="about-manifesto">
         <p class="eyebrow">PURE BOTANICAL · PRECISE NUTRITION</p>
@@ -29,7 +30,7 @@ import PageHero from "@/components/PageHero.astro";
         <p>深耕醫療保健市場數十年的 <strong>威馬康健 WIMACARE</strong>，憑藉頂尖專業團隊，推出「專業全素食保健系列」，以純植物來源的專家級解方，提供高效、零負擔的精準營養。</p>
       </div>
       <figure class="about-feature-media">
-        <img src="/about/research-team.jpg" alt="專業生化與營養學團隊進行研究" loading="lazy" />
+        <img src={sitePath("/about/research-team.jpg")} alt="專業生化與營養學團隊進行研究" loading="lazy" />
         <figcaption>以專業生化與營養學團隊，打造符合健康需求的優質保健食品。</figcaption>
       </figure>
     </div>
@@ -38,7 +39,7 @@ import PageHero from "@/components/PageHero.astro";
   <section class="section about-feature-section about-feature-tinted">
     <div class="shell about-feature-grid">
       <figure class="about-feature-media about-facility-media">
-        <img src="/about/cgmp-facility.png" alt="cGMP 藥廠等級生產工廠與製程環境" loading="lazy" />
+        <img src={sitePath("/about/cgmp-facility.png")} alt="cGMP 藥廠等級生產工廠與製程環境" loading="lazy" />
         <figcaption><strong>cGMP 藥廠等級生產工廠</strong>，從原料溯源、生產封裝到出廠檢驗層層把關。</figcaption>
       </figure>
       <div class="about-feature-copy about-feature-copy-gold">
@@ -62,7 +63,7 @@ import PageHero from "@/components/PageHero.astro";
         <p>這份營養專業與純淨善念的堅持，讓威馬康健成為台灣全素食保健的綠色權威。我們以專業團隊嚴格為品質把關，讓您用得安心，身體健康、開心愉悅。</p>
       </div>
       <figure class="about-feature-media about-brand-media">
-        <img src="/about/brand-health.jpg" alt="威馬康健全素保健、地球永續、純淨安心與專業團隊理念" loading="lazy" />
+        <img src={sitePath("/about/brand-health.jpg")} alt="威馬康健全素保健、地球永續、純淨安心與專業團隊理念" loading="lazy" />
       </figure>
     </div>
   </section>

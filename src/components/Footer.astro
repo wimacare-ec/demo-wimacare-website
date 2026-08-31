@@ -1,8 +1,12 @@
+---
+import { sitePath } from "@/lib/site-path";
+---
+
 <footer class="site-footer">
   <div class="footer-accent" aria-hidden="true"></div>
   <div class="footer-grid shell">
     <section class="footer-intro" aria-labelledby="footer-brand-name">
-      <a class="brand footer-brand" href="/" aria-label="威馬康健首頁">
+      <a class="brand footer-brand" href={sitePath("/")} aria-label="威馬康健首頁">
         <span class="brand-mark" aria-hidden="true">W</span>
         <span class="brand-copy"><strong id="footer-brand-name">威馬康健</strong><small>WIMA CARE</small></span>
       </a>
@@ -25,11 +29,11 @@
 
     <nav class="footer-column" aria-labelledby="footer-nav-title">
       <h2 id="footer-nav-title">網站導覽</h2>
-      <a href="/about/">品牌故事</a>
-      <a href="/products/">產品介紹</a>
-      <a href="/news/">最新消息</a>
-      <a href="/channels/">實體通路</a>
-      <a href="/contact/">聯絡我們</a>
+      <a href={sitePath("/about/")}>品牌故事</a>
+      <a href={sitePath("/products/")}>產品介紹</a>
+      <a href={sitePath("/news/")}>最新消息</a>
+      <a href={sitePath("/channels/")}>實體通路</a>
+      <a href={sitePath("/contact/")}>聯絡我們</a>
       <a href="https://www.104.com.tw/company/1a2x6bl5yl" target="_blank" rel="noreferrer">徵才資訊</a>
     </nav>
 
@@ -45,12 +49,12 @@
     <section class="footer-column footer-admin" aria-labelledby="footer-admin-title">
       <h2 id="footer-admin-title">內容管理</h2>
       <p>最新消息與健康知識由 TinaCMS 維護，授權編輯者可從管理入口更新。</p>
-      <a class="footer-action" href="/admin/index.html" rel="nofollow">內容管理後台 <span aria-hidden="true">→</span></a>
+      <a class="footer-action" href={sitePath("/admin/index.html")} rel="nofollow">內容管理後台 <span aria-hidden="true">→</span></a>
     </section>
   </div>
 
   <div class="footer-bottom shell">
     <span>© 威馬康健國際醫學生技有限公司 All Rights Reserved. 統一編號 83467360</span>
-    <span><a href="/privacy/">隱私權政策</a><i aria-hidden="true">·</i><a href="/contact/">聯絡我們</a></span>
+    <span><a href={sitePath("/privacy/")}>隱私權政策</a><i aria-hidden="true">·</i><a href={sitePath("/contact/")}>聯絡我們</a></span>
   </div>
 </footer>

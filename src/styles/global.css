@@ -162,7 +162,7 @@ h1, .display, .section-title, .page-hero h1 { font-family: var(--serif); font-we
 .cta-grid .button { color: var(--wine); border-color: #fff; background: #fff; }
 
 .page-hero { padding: 64px 0 70px; background: linear-gradient(135deg, #f6eee1, #fffdf8); border-bottom: 1px solid var(--line); }
-.page-hero.has-background { min-height: clamp(340px, 30vw, 460px); padding-top: clamp(48px, 5vw, 72px); display: grid; align-items: start; background-image: linear-gradient(90deg, rgba(255,255,255,.9), rgba(255,255,255,.62) 58%, rgba(255,255,255,.18)), url("/page-hero-waves.png"); background-position: center bottom; background-size: cover; }
+.page-hero.has-background { min-height: clamp(340px, 30vw, 460px); padding-top: clamp(48px, 5vw, 72px); display: grid; align-items: start; background-image: linear-gradient(90deg, rgba(255,255,255,.9), rgba(255,255,255,.62) 58%, rgba(255,255,255,.18)), url("../page-hero-waves.png"); background-position: center bottom; background-size: cover; }
 .page-hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; align-items: end; gap: 8vw; }
 .page-hero h1 { margin: 0; font-size: clamp(48px, 7vw, 88px); }
 .page-hero-grid > p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.9; }
