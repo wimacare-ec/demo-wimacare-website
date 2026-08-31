@@ -1,0 +1,49 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+const endpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT || "https://formspree.io/f/mrpgenel";
+---
+<BaseLayout title="聯絡我們｜威馬康健" description="聯絡威馬康健客服、確認授權通路或提出合作需求。" pageClass="interior-page contact-page-body">
+  <div class="contact-page">
+    <PageHero background eyebrow="CONTACT WIMA CARE" title="聯絡我們" description="依需求分類問題，讓產品、訂單、經銷、合作與其他需求更快交給正確窗口。" />
+    <section class="section"><div class="shell contact-layout">
+    <aside class="contact-info"><p class="eyebrow">WE ARE HERE TO HELP</p><h2>有任何問題，<br />歡迎告訴我們。</h2><p>歡迎於服務時間透過電話、電郵或 LINE OA 與我們聯絡。</p><div class="contact-list"><p><b>客服電話</b><a href="tel:0800585853">0800-58-58-53</a></p><p><b>官方電郵</b><a href="mailto:service@oin.com.tw">service@oin.com.tw</a></p><p><b>服務時間</b><span>週一至週五 09:00–18:00</span></p><p><b>LINE OA</b><span>@wimacare</span></p></div></aside>
+    <form class="contact-form" id="contact-form" action={endpoint} method="post"><p class="eyebrow">CONTACT FORM</p><h2>請選擇聯絡需求</h2><div class="form-grid">
+      <div class="form-field full"><label for="topic">需求分類 *</label><select id="topic" name="topic" required><option value="">請選擇</option><option>成為零售夥伴</option><option>訂單問題</option><option>產品諮詢</option><option>合作提案</option><option>人才招募</option><option>意見反映</option><option>其他問題</option></select></div>
+      <div class="form-field"><label for="name">姓名 *</label><input id="name" name="name" autocomplete="name" required /></div>
+      <div class="form-field"><label for="email">電子郵件 *</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+      <div class="form-field"><label for="phone">聯絡電話</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+      <div class="form-field"><label for="company">公司／單位</label><input id="company" name="company" autocomplete="organization" /></div>
+      <div class="form-field full"><label for="message">問題或提案內容 *</label><textarea id="message" name="message" required></textarea></div>
+      <label class="consent"><input type="checkbox" name="privacy_consent" required /><span>我已閱讀並同意隱私權政策，了解本表單資料將用於回覆本次聯絡需求。</span></label>
+    </div><input type="hidden" name="_subject" value="威馬康健網站聯絡表單" /><button class="button" type="submit">送出聯絡需求</button><div class="form-status" id="form-status" role="status" aria-live="polite"></div></form>
+    </div></section>
+  </div>
+  <script>
+    const form = document.querySelector<HTMLFormElement>("#contact-form");
+    const status = document.querySelector<HTMLElement>("#form-status");
+    const submitButton = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+    form?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (status) status.textContent = "表單送出中…";
+      if (submitButton) submitButton.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        if (!response.ok) throw new Error("Formspree submission failed");
+
+        form.reset();
+        if (status) status.textContent = "已收到您的訊息，我們將盡快回覆您。";
+      } catch {
+        if (status) status.textContent = "表單送出失敗，請稍後再試，或改以電話、電郵聯絡我們。";
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+      }
+    });
+  </script>
+</BaseLayout>

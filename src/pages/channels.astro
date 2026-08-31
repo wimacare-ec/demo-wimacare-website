@@ -1,0 +1,60 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+const channels = [
+  ["wima", "north", "威馬康健", "北部", "台北合作通路 A", "台北市（正式地址待確認）"],
+  ["wima", "central", "威馬康健", "中部", "台中合作通路 C", "台中市（正式地址待確認）"],
+  ["wima", "south", "威馬康健", "南部", "高雄合作通路 G", "高雄市（正式地址待確認）"],
+  ["wima", "east-islands", "威馬康健", "東部", "台東合作通路 F", "台東市威馬路100號1樓"],
+];
+---
+<BaseLayout title="實體通路｜威馬康健" description="依品牌與地區查詢威馬康健正式授權實體通路。" pageClass="interior-page channels-page-body">
+  <div class="channels-page">
+    <PageHero background eyebrow="PHYSICAL CHANNELS" title="實體通路" description="依品牌與地區找到正式授權實體合作夥伴；目前通路名稱與地址為資料欄位示意，上線前須由品牌方確認。" />
+    <section class="section"><div class="shell">
+    <div class="channel-controls">
+      <fieldset><legend>代理品牌</legend><div class="filter-bar"><button class="filter-button active" type="button" aria-pressed="true" data-channel-brand="all">全部</button><button class="filter-button" type="button" aria-pressed="false" data-channel-brand="wima">威馬康健</button></div></fieldset>
+      <fieldset><legend>銷售地區</legend><div class="filter-bar channel-region-filter"><button class="filter-button active" type="button" aria-pressed="true" data-channel-region="all">全部</button><button class="filter-button" type="button" aria-pressed="false" data-channel-region="north">北部</button><button class="filter-button" type="button" aria-pressed="false" data-channel-region="central">中部</button><button class="filter-button" type="button" aria-pressed="false" data-channel-region="south">南部</button><button class="filter-button" type="button" aria-pressed="false" data-channel-region="east-islands">東部</button></div></fieldset>
+    </div>
+    <p class="filter-summary" id="channel-filter-summary" aria-live="polite">目前顯示 <strong>{channels.length}</strong> 個實體通路</p>
+    <div class="channel-grid">{channels.map(([brand, region, brandLabel, regionLabel, title, address]) => <article class="channel-card" data-brand={brand} data-region={region}><div class="channel-tags"><span>{brandLabel}</span><span>{regionLabel}</span></div><h2>{title}</h2><p>{address}</p></article>)}</div>
+    <div id="channel-empty" class="empty-state">目前沒有符合條件的實體通路。</div>
+    <div class="notice">實體通路資料筆數較少時可由版本控制內的靜態資料維護；若未來超過約 30 筆或異動頻繁，可再擴充為 TinaCMS collection。</div>
+    </div></section>
+  </div>
+  <script>
+    let activeBrand = "all";
+    let activeRegion = "all";
+    const cards = document.querySelectorAll<HTMLElement>(".channel-card");
+    const empty = document.querySelector<HTMLElement>("#channel-empty");
+    const summary = document.querySelector<HTMLElement>("#channel-filter-summary");
+    const filter = () => {
+      let shown = 0;
+      cards.forEach((card) => {
+        const visible = (activeBrand === "all" || card.dataset.brand === activeBrand) && (activeRegion === "all" || card.dataset.region === activeRegion);
+        card.classList.toggle("is-hidden", !visible);
+        if (visible) shown += 1;
+      });
+      if (empty) empty.style.display = shown ? "none" : "block";
+      if (summary) summary.innerHTML = `目前顯示 <strong>${shown}</strong> 個實體通路`;
+    };
+    document.querySelectorAll<HTMLButtonElement>("[data-channel-brand]").forEach((button) => button.addEventListener("click", () => {
+      activeBrand = button.dataset.channelBrand || "all";
+      document.querySelectorAll<HTMLButtonElement>("[data-channel-brand]").forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      filter();
+    }));
+    document.querySelectorAll<HTMLButtonElement>("[data-channel-region]").forEach((button) => button.addEventListener("click", () => {
+      activeRegion = button.dataset.channelRegion || "all";
+      document.querySelectorAll<HTMLButtonElement>("[data-channel-region]").forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      filter();
+    }));
+  </script>
+</BaseLayout>

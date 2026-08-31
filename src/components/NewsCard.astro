@@ -1,0 +1,14 @@
+---
+const { entry, basePath = "/news" } = Astro.props;
+const publishedAt = entry.data.publishedAt;
+const date = `${publishedAt.getFullYear()}.${publishedAt.getMonth() + 1}.${publishedAt.getDate()}`;
+const href = `${basePath}/${entry.id}/`;
+const cover = entry.data.cover || "/og.png";
+---
+<article class="news-card" data-category={entry.data.category}>
+  <img class="news-card-image" src={cover} alt={`${entry.data.title}社群預覽圖片`} loading="lazy" decoding="async" />
+  <h2><a href={href}>{entry.data.title}</a></h2>
+  <time class="news-date" datetime={publishedAt.toISOString()}>{date}</time>
+  <p>{entry.data.excerpt}</p>
+  <a class="news-cta" href={href} aria-label={`閱讀文章：${entry.data.title}`}>閱讀文章 →</a>
+</article>

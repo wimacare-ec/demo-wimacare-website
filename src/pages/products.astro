@@ -1,0 +1,106 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+
+const channelGroups = [
+  {
+    id: "community-pharmacy",
+    label: "社區藥局",
+    products: [
+      ["VEGETARIAN CARE", "素食保健系列", "以「植萃營養，安心有效」為品牌理念，打造專業的素食保健食品"],
+      ["DAILY CARE", "葷食保健系列", "適合建立每日保養習慣的基礎，對應忙碌生活與多元日常需求。"],
+    ],
+  },
+  {
+    id: "chain-drugstore",
+    label: "連鎖藥妝",
+    products: [
+      ["VEGETARIAN CARE", "素食保健系列", "以「植萃營養，安心有效」為品牌理念，打造專業的素食保健食品"],
+      ["DAILY CARE", "葷食保健系列", "適合建立每日保養習慣的基礎，對應忙碌生活與多元日常需求。"],
+    ],
+  },
+];
+---
+
+<BaseLayout title="產品介紹｜威馬康健" description="依社區藥局與連鎖藥妝通路瀏覽威馬康健素食及葷食保健系列。" pageClass="interior-page products-page">
+  <PageHero background eyebrow="OUR PRODUCTS" title="產品介紹" description="依販售通路瀏覽威馬康健產品系列；正式上線內容將補齊核准品名、規格、成分與注意事項。" />
+  <section class="section">
+    <div class="shell">
+      <div class="product-channel-navigation">
+        <p class="product-channel-label">選擇販售通路</p>
+        <div class="filter-bar product-tab-list" role="tablist" aria-label="產品販售通路">
+          {channelGroups.map((channel, index) => (
+            <button
+              id={`product-tab-${channel.id}`}
+              class:list={["filter-button", { active: index === 0 }]}
+              type="button"
+              role="tab"
+              aria-selected={index === 0 ? "true" : "false"}
+              aria-controls={`product-panel-${channel.id}`}
+              tabindex={index === 0 ? "0" : "-1"}
+              data-product-channel={channel.id}
+            >
+              {channel.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {channelGroups.map((channel, index) => (
+        <section
+          id={`product-panel-${channel.id}`}
+          class="product-tab-panel"
+          role="tabpanel"
+          aria-labelledby={`product-tab-${channel.id}`}
+          hidden={index !== 0}
+        >
+          <div class="product-grid">
+            {channel.products.map(([pack, title, description]) => (
+              <article class="product-card">
+                <div class="visual"><div class="mini-pack">{pack}</div></div>
+                <small>{channel.label} · WIMA CARE</small>
+                <h2>{title}</h2>
+                <p>{description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <div class="notice"><strong>產品資訊聲明：</strong>本頁目前為網站架構與內容欄位示意，不構成醫療建議或功效保證。正式產品內容須經品牌、法務與法規審核後發布。</div>
+    </div>
+  </section>
+
+  <script>
+    const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-product-channel]"));
+    const panels = Array.from(document.querySelectorAll<HTMLElement>(".product-tab-panel"));
+
+    const selectProductChannel = (selectedTab: HTMLButtonElement, focus = false) => {
+      const selectedChannel = selectedTab.dataset.productChannel;
+      tabs.forEach((tab) => {
+        const active = tab === selectedTab;
+        tab.classList.toggle("active", active);
+        tab.setAttribute("aria-selected", String(active));
+        tab.tabIndex = active ? 0 : -1;
+      });
+      panels.forEach((panel) => {
+        panel.hidden = panel.id !== `product-panel-${selectedChannel}`;
+      });
+      if (focus) selectedTab.focus();
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => selectProductChannel(tab));
+      tab.addEventListener("keydown", (event) => {
+        let nextIndex = index;
+        if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+        else if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === "Home") nextIndex = 0;
+        else if (event.key === "End") nextIndex = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        selectProductChannel(tabs[nextIndex], true);
+      });
+    });
+  </script>
+</BaseLayout>

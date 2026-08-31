@@ -1,0 +1,68 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import "@/styles/global.css";
+import "@/styles/interior.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+  pageClass?: string;
+}
+
+const {
+  title = "威馬康健 WIMA CARE｜官方品牌網站",
+  description = "威馬康健整合品牌、產品、最新消息與授權通路，提供清楚、可信賴的健康資訊與服務入口。",
+  image = "/og.png",
+  noindex = false,
+  pageClass,
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(image, Astro.site);
+---
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <title>{title}</title>
+  </head>
+  <body class={pageClass}>
+    <Header pathname={Astro.url.pathname} />
+    <main id="main-content"><slot /></main>
+    <Footer />
+    <button class="back-to-top" type="button" aria-label="回到頁面最上方" tabindex="-1">
+      <span aria-hidden="true">↑</span>
+    </button>
+    <script>
+      const backToTop = document.querySelector<HTMLButtonElement>(".back-to-top");
+
+      const updateBackToTop = () => {
+        const visible = window.scrollY > 480;
+        backToTop?.classList.toggle("is-visible", visible);
+        backToTop?.setAttribute("tabindex", visible ? "0" : "-1");
+      };
+
+      updateBackToTop();
+      window.addEventListener("scroll", updateBackToTop, { passive: true });
+      backToTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    </script>
+  </body>
+</html>

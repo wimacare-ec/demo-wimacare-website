@@ -1,0 +1,43 @@
+{
+  "name": "wimacare-brand-site",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0 <25"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:tina": "tinacms dev",
+    "dev:astro": "astro dev --host 127.0.0.1 --port 4323",
+    "build": "tinacms build --content=local -c \"astro build\"",
+    "build:local": "PUBLIC_TINA_CLIENT_ID=local TINA_TOKEN=local tinacms build --local --skip-cloud-checks -c \"astro build\"",
+    "build:astro": "astro build",
+    "preview": "astro preview",
+    "check": "npm run check:astro && tinacms audit",
+    "check:astro": "astro check",
+    "deploy": "wrangler pages deploy dist --project-name=wimacare-brand-site"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.3",
+    "astro": "7.2.6",
+    "tinacms": "3.12.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@tinacms/cli": "2.6.1",
+    "typescript": "5.9.3",
+    "wrangler": "4.125.0"
+  },
+  "type": "module",
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.25.12": true,
+    "esbuild@0.28.0": true,
+    "esbuild@0.28.1": true,
+    "sharp@0.34.5": true,
+    "sharp@0.35.2": true,
+    "workerd@1.20260820.1": true,
+    "core-js@3.50.0": true
+  }
+}

@@ -1,0 +1,25 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("knowledge", ({ data }) => !data.draft);
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const date = entry.data.publishedAt.toLocaleDateString("zh-TW", { year: "numeric", month: "long", day: "numeric" });
+const title = entry.data.seo?.title || `${entry.data.title}｜健康知識｜威馬康健`;
+const description = entry.data.seo?.description || entry.data.excerpt;
+---
+
+<BaseLayout title={title} description={description} image={entry.data.cover || "/og.png"} pageClass="interior-page article-page knowledge-article-page">
+  <article>
+    <header class="article-header"><div class="article-shell"><a class="article-back" href="/knowledge/">← 回健康知識</a><div class="news-meta"><span>{entry.data.category}</span><time datetime={entry.data.publishedAt.toISOString()}>{date}</time></div><h1>{entry.data.title}</h1><p>{entry.data.excerpt}</p></div></header>
+    <div class="article-shell article-body">
+      <Content />
+      <aside class="article-notice">本專區內容僅供一般健康知識參考，不作為診斷或治療依據；如有個人健康問題，請諮詢合格醫療專業人員。</aside>
+    </div>
+  </article>
+</BaseLayout>

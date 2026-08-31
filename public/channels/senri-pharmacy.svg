@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-labelledby="title desc">
+  <title id="title">森日藥局示意 Logo</title>
+  <desc id="desc">綠色樹葉圖形與森日藥局文字</desc>
+  <rect width="600" height="320" rx="36" fill="#297a50"/>
+  <circle cx="118" cy="160" r="58" fill="#fff" opacity=".14"/>
+  <path d="M118 92c28 20 43 44 43 70 0 27-18 50-43 61-25-11-43-34-43-61 0-26 15-50 43-70Z" fill="#fff"/>
+  <path d="M118 117v88M92 150l26 22 29-29" fill="none" stroke="#297a50" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="205" y="160" fill="#fff" font-size="50" font-weight="700" font-family="Noto Sans TC, PingFang TC, sans-serif">森日藥局</text>
+  <text x="208" y="199" fill="#d7eadf" font-size="18" font-weight="600" letter-spacing="4" font-family="Arial, sans-serif">SENRI PHARMACY</text>
+</svg>

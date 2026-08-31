@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+import NewsCard from "@/components/NewsCard.astro";
+
+const categories = ["保健新知", "飲食指南", "成分功效"];
+const knowledge = (await getCollection("knowledge", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+---
+
+<BaseLayout title="健康知識｜威馬康健" description="閱讀威馬康健整理的保健新知、飲食指南與成分功效文章。" pageClass="interior-page knowledge-list-page">
+  <PageHero background eyebrow="HEALTH KNOWLEDGE" title="健康知識" description="以清楚易懂的方式整理保健新知、飲食指南與成分功效，協助您建立適合自己的健康知識基礎。" />
+  <section class="section"><div class="shell">
+    <div class="filter-bar" aria-label="健康知識分類">
+      <button class="filter-button active" type="button" aria-pressed="true" data-knowledge-filter="all">全部</button>
+      {categories.map((category) => <button class="filter-button" type="button" aria-pressed="false" data-knowledge-filter={category}>{category}</button>)}
+    </div>
+    <p class="filter-summary" id="knowledge-filter-summary" aria-live="polite">目前顯示 <strong>{knowledge.length}</strong> 篇文章</p>
+    <div class="news-grid">{knowledge.map((entry) => <NewsCard entry={entry} basePath="/knowledge" />)}</div>
+    <div id="knowledge-empty" class:list={["empty-state", { "is-visible": knowledge.length === 0 }]}>目前尚無健康知識文章，內容準備中。</div>
+  </div></section>
+  <script>
+    const buttons = document.querySelectorAll<HTMLButtonElement>("[data-knowledge-filter]");
+    const cards = document.querySelectorAll<HTMLElement>(".news-card");
+    const empty = document.querySelector<HTMLElement>("#knowledge-empty");
+    const summary = document.querySelector<HTMLElement>("#knowledge-filter-summary");
+    buttons.forEach((button) => button.addEventListener("click", () => {
+      const selected = button.dataset.knowledgeFilter || "all";
+      let shown = 0;
+      buttons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      cards.forEach((card) => {
+        const visible = selected === "all" || card.dataset.category === selected;
+        card.classList.toggle("is-hidden", !visible);
+        if (visible) shown += 1;
+      });
+      empty?.classList.toggle("is-visible", shown === 0);
+      if (summary) summary.innerHTML = `目前顯示 <strong>${shown}</strong> 篇文章`;
+    }));
+  </script>
+</BaseLayout>

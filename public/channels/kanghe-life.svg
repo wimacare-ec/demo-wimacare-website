@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-labelledby="title desc">
+  <title id="title">康禾生活示意 Logo</title>
+  <desc id="desc">橘色太陽與麥穗圖形及康禾生活文字</desc>
+  <rect width="600" height="320" rx="36" fill="#f4eee3"/>
+  <circle cx="117" cy="143" r="50" fill="#cf6e31"/>
+  <path d="M117 72v24M117 190v25M46 143h24M165 143h24M67 93l18 17M151 177l18 18M168 93l-18 17M84 177l-18 18" stroke="#cf6e31" stroke-width="9" stroke-linecap="round"/>
+  <text x="210" y="158" fill="#384d3d" font-size="50" font-weight="700" font-family="Noto Sans TC, PingFang TC, sans-serif">康禾生活</text>
+  <text x="212" y="198" fill="#a75b2c" font-size="18" font-weight="600" letter-spacing="4" font-family="Arial, sans-serif">KANGHE LIFE</text>
+</svg>

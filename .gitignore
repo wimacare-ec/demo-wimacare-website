@@ -1,0 +1,23 @@
+/node_modules/
+/.astro/
+/.tina/
+/tina/__generated__/
+/public/admin/
+/.wrangler/
+/.pnpm-store/
+/dist/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.DS_Store
+npm-debug.log*
+
+# Legacy build output
+/.next/
+/.vinext/
+/out/
+/.openai/

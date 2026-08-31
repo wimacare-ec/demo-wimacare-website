@@ -1,0 +1,9 @@
+---
+const { eyebrow, title, description, background = false } = Astro.props;
+---
+<header class:list={["page-hero", { "has-background": background }]}>
+  <div class="shell page-hero-grid">
+    <div><p class="eyebrow">{eyebrow}</p><h1>{title}</h1></div>
+    <p>{description}</p>
+  </div>
+</header>

@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+import NewsCard from "@/components/NewsCard.astro";
+const news = (await getCollection("news", ({ data }) => !data.draft)).sort((a,b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+---
+<BaseLayout title="最新消息｜威馬康健" description="查看威馬康健官方聲明、產品新訊、媒體報導與近期活動。" pageClass="interior-page news-list-page">
+  <PageHero background eyebrow="NEWS & PRESS" title="最新消息" description="官方聲明、產品新訊、媒體報導與近期活動由 TinaCMS 管理；內容更新後會經 GitHub 與 Cloudflare 自動發布。" />
+  <section class="section"><div class="shell">
+    <div class="filter-bar" aria-label="消息分類"><button class="filter-button active" type="button" aria-pressed="true" data-news-filter="all">全部</button><button class="filter-button" type="button" aria-pressed="false" data-news-filter="官方聲明">官方聲明</button><button class="filter-button" type="button" aria-pressed="false" data-news-filter="產品新訊">產品新訊</button><button class="filter-button" type="button" aria-pressed="false" data-news-filter="媒體報導">媒體報導</button><button class="filter-button" type="button" aria-pressed="false" data-news-filter="近期活動">近期活動</button></div>
+    <p class="filter-summary" id="news-filter-summary" aria-live="polite">目前顯示 <strong>{news.length}</strong> 則消息</p>
+    <div class="news-grid">{news.map((entry) => <NewsCard entry={entry} />)}</div>
+  </div></section>
+  <script>
+    const buttons = document.querySelectorAll<HTMLButtonElement>("[data-news-filter]");
+    const summary = document.querySelector<HTMLElement>("#news-filter-summary");
+    buttons.forEach((button) => button.addEventListener("click", () => {
+      const selected = button.dataset.newsFilter;
+      let shown = 0;
+      buttons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      document.querySelectorAll<HTMLElement>(".news-card").forEach((card) => {
+        const visible = selected === "all" || card.dataset.category === selected;
+        card.classList.toggle("is-hidden", !visible);
+        if (visible) shown += 1;
+      });
+      if (summary) summary.innerHTML = `目前顯示 <strong>${shown}</strong> 則消息`;
+    }));
+  </script>
+</BaseLayout>

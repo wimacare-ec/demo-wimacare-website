@@ -1,0 +1,112 @@
+---
+const { pathname = "/" } = Astro.props;
+const primaryNav = [
+  ["關於我們", "/about/"],
+  ["產品介紹", "/products/"],
+  ["最新消息", "/news/"],
+  ["健康知識", "/knowledge/"],
+];
+const salesNav = [
+  ["實體通路", "/channels/"],
+  ["官方商城", "/eshop/"],
+  ["成為零售夥伴", "/dealer/"],
+];
+const salesNavActive = salesNav.some(([, href]) => pathname.startsWith(href));
+---
+
+<a class="skip-link" href="#main-content">跳至主要內容</a>
+<header class="site-header">
+  <div class="site-header-shell">
+    <a class="header-brand" href="/" aria-label="威馬康健首頁">
+      <img
+        class="header-brand-logo"
+        src="/wimacare-logo.png"
+        alt="威馬康健 WIMA CARE"
+        width="800"
+        height="340"
+      />
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span><span class="sr-only">開啟選單</span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="主要導覽">
+      {primaryNav.map(([label, href]) => (
+        <a href={href} aria-current={pathname.startsWith(href) ? "page" : undefined}>{label}</a>
+      ))}
+      <div class:list={["nav-dropdown", { "is-current": salesNavActive }]}>
+        <button
+          class="nav-dropdown-trigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sales-channel-submenu"
+        >
+          <span>銷售通路</span>
+          <span class="nav-dropdown-chevron" aria-hidden="true">⌄</span>
+        </button>
+        <div id="sales-channel-submenu" class="nav-submenu" role="group" aria-label="銷售通路子選單">
+          {salesNav.map(([label, href]) => (
+            <a href={href} aria-current={pathname.startsWith(href) ? "page" : undefined}>{label}</a>
+          ))}
+        </div>
+      </div>
+      <a href="/contact/" aria-current={pathname.startsWith("/contact/") ? "page" : undefined}>聯絡我們</a>
+    </nav>
+    <a class="header-shop" href="https://line.me/R/ti/p/@910mkdxc" target="_blank" rel="noreferrer">
+      <img src="/assets/line-icon.png" alt="" width="1001" height="1000" aria-hidden="true" />
+      <span>線上客服</span>
+    </a>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
+  const menu = document.querySelector<HTMLElement>(".main-nav");
+  const salesDropdown = document.querySelector<HTMLElement>(".nav-dropdown");
+  const salesTrigger = document.querySelector<HTMLButtonElement>(".nav-dropdown-trigger");
+  const desktopNavigation = window.matchMedia("(min-width: 981px)");
+
+  const setSalesMenu = (open: boolean) => {
+    salesDropdown?.classList.toggle("is-open", open);
+    salesTrigger?.setAttribute("aria-expanded", String(open));
+  };
+
+  toggle?.addEventListener("click", () => {
+    const open = menu?.classList.toggle("is-open") ?? false;
+    toggle.setAttribute("aria-expanded", String(open));
+    if (!open) setSalesMenu(false);
+  });
+
+  salesTrigger?.addEventListener("click", () => {
+    setSalesMenu(desktopNavigation.matches || !salesDropdown?.classList.contains("is-open"));
+  });
+
+  salesDropdown?.addEventListener("mouseenter", () => {
+    if (desktopNavigation.matches) setSalesMenu(true);
+  });
+  salesDropdown?.addEventListener("mouseleave", () => {
+    if (desktopNavigation.matches) setSalesMenu(false);
+  });
+  salesDropdown?.addEventListener("focusin", () => {
+    if (desktopNavigation.matches) setSalesMenu(true);
+  });
+  salesDropdown?.addEventListener("focusout", (event) => {
+    if (!salesDropdown.contains(event.relatedTarget as Node | null)) setSalesMenu(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && salesDropdown?.classList.contains("is-open")) {
+      setSalesMenu(false);
+      salesTrigger?.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!salesDropdown?.contains(event.target as Node)) setSalesMenu(false);
+  });
+
+  menu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+    menu.classList.remove("is-open");
+    toggle?.setAttribute("aria-expanded", "false");
+    setSalesMenu(false);
+  }));
+</script>

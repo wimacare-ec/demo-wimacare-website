@@ -1,0 +1,248 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import NewsCard from "@/components/NewsCard.astro";
+import "../styles/home.css";
+
+const news = (await getCollection("news", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+  .filter(({ data }) => data.featured)
+  .slice(0, 3);
+
+const knowledge = (await getCollection("knowledge", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+  .slice(0, 3);
+
+const promises = [
+  { number: "01", label: "CLARITY", title: "素食專屬", description: "從植萃營養出發，提供全方位素食保健產品。" },
+  { number: "02", label: "QUALITY", title: "嚴選品質", description: "精心設計配方與挑選原料，把關製程，食用好安心。" },
+  { number: "03", label: "TRUST", title: "專業服務", description: "結合專業團隊與銷售通路，致力於親切貼心的優質服務。" },
+  { number: "04", label: "CARE", title: "實惠舒心", description: "以合理的價格與功效，為您日常健康加分，創造美好。" },
+];
+
+const brands = [
+  {
+    code: "W",
+    eyebrow: "WIMA CARE",
+    title: "威馬康健",
+    description: "以日常保養情境出發，建立安心、清楚且容易持續的健康選擇。",
+    tone: "forest",
+  },
+  {
+    code: "V",
+    eyebrow: "VEGAN WIMACARE",
+    title: "VeganWimaCare",
+    description: "以植物出發，陪伴每位素食者維持最佳狀態",
+    tone: "wine",
+  },
+];
+
+const purchaseChannels = [
+  ["森日藥局", "/channels/senri-pharmacy.svg"],
+  ["安心健康", "/channels/ansin-health.svg"],
+  ["康禾生活", "/channels/kanghe-life.svg"],
+  ["好鄰保健", "/channels/neighbor-care.svg"],
+  ["樂活藥妝", "/channels/lohas-drugstore.svg"],
+];
+---
+
+<BaseLayout>
+  <div class="home-page">
+    <section class="home-hero" aria-labelledby="home-hero-title">
+      <div class="shell home-hero-grid">
+        <div class="home-hero-copy">
+          <p class="home-eyebrow"><span></span>WIMA CARE · CREATE A BETTER LIFE</p>
+          <h1 id="home-hero-title">把專業健康，<br />說得更<em>清楚。</em></h1>
+          <p class="home-lede">集結瑞士專家團隊的研發實力與 cGMP 藥廠級工廠品質，為台灣大眾與素食族群量身打造保健配方。</p>
+          <div class="home-hero-actions">
+            <a class="home-button home-button-primary" href="/products/">探索產品 <span aria-hidden="true">&gt;&gt;</span></a>
+            <a class="home-button home-button-outline" href="/about/">認識威馬康健 <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="home-hero-visual" aria-label="威馬康健品牌理念示意">
+          <div class="home-hero-orbit" aria-hidden="true"></div>
+          <article class="home-care-card">
+            <header><span>WIMA CARE</span><small>DAILY WELLNESS</small></header>
+            <div class="home-care-mark" aria-hidden="true">W</div>
+            <h2>植萃營養，<br />安心有效。</h2>
+            <p>健康應該回歸純粹的初衷，嚴謹把關，只為品質負責。</p>
+            <div class="home-care-tags"><span>素食保健</span><span>專業研發</span><span>品質把關</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-promises" aria-labelledby="home-promises-title">
+      <div class="shell">
+        <div class="home-promises-heading">
+          <p class="home-eyebrow light"><span></span>OUR PROMISE</p>
+          <h2 id="home-promises-title">用心把關，讓補給回歸純粹</h2>
+        </div>
+        <div class="home-promise-grid">
+          {promises.map((item) => (
+            <article>
+              <p><b>{item.number}</b><span>{item.label}</span></p>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section home-brands" aria-labelledby="home-brands-title">
+      <div class="shell">
+        <div class="home-section-heading">
+          <p class="home-eyebrow"><span></span>BRANDS WE CARE FOR</p>
+          <h2 id="home-brands-title">健康陪伴您過好每一天<br />擁有美好生活</h2>
+          <p>產品內容將依正式授權與核准資料持續更新；購買前請確認產品標示與適用方式。</p>
+        </div>
+        <div class="home-brand-grid">
+          {brands.map((brand) => (
+            <article class:list={["home-brand-card", `is-${brand.tone}`]}>
+              <div class="home-brand-card-top"><span>{brand.eyebrow}</span><b aria-hidden="true">{brand.code}</b></div>
+              <div class="home-brand-card-copy">
+                <h3>{brand.title}</h3>
+                <p>{brand.description}</p>
+                <a href="/products/">查看系列 <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="home-trial" aria-labelledby="home-trial-title">
+      <div class="shell home-trial-grid">
+        <div>
+          <p class="home-eyebrow light"><span></span>FREE TRIAL · WIMA CARE</p>
+          <h2 id="home-trial-title">索取免費體驗包</h2>
+          <p>加入官方 LINE，瞭解限量試用活動與申請方式。</p>
+        </div>
+        <a class="home-trial-cta" href="https://line.me/R/ti/p/@wimacare" target="_blank" rel="noopener noreferrer" aria-label="加入威馬康健 LINE 瞭解免費體驗包">
+          <span class="home-line-badge" aria-hidden="true">LINE</span>
+          <strong>點我瞭解</strong>
+          <b aria-hidden="true">→</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="home-section home-news" aria-labelledby="home-news-title">
+      <div class="shell">
+        <div class="home-heading-row">
+          <div>
+            <p class="home-eyebrow"><span></span>LATEST UPDATES</p>
+            <h2 id="home-news-title">最新消息</h2>
+          </div>
+          <a class="home-text-link" href="/news/">查看全部消息 <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="news-grid">{news.map((entry) => <NewsCard entry={entry} />)}</div>
+      </div>
+    </section>
+
+    <section class="home-section home-news" aria-labelledby="home-knowledge-title">
+      <div class="shell">
+        <div class="home-heading-row">
+          <div>
+            <p class="home-eyebrow"><span></span>HEALTH KNOWLEDGE</p>
+            <h2 id="home-knowledge-title">健康知識</h2>
+          </div>
+          <a class="home-text-link" href="/knowledge/">查看全部健康知識 <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="news-grid">{knowledge.map((entry) => <NewsCard entry={entry} basePath="/knowledge" />)}</div>
+      </div>
+    </section>
+
+    <section class="home-section home-purchase" aria-labelledby="home-purchase-title">
+      <div class="shell home-purchase-heading">
+        <p class="home-eyebrow"><span></span>WHERE TO BUY</p>
+        <h2 id="home-purchase-title">哪裡購買</h2>
+        <p>威馬康健商品於全台連鎖通路與社區藥局販售中，實際品項請依各門店現場為準。</p>
+      </div>
+      <div class="home-purchase-carousel" role="region" aria-roledescription="carousel" aria-label="主要連鎖通路">
+        <div class="home-purchase-viewport" tabindex="0">
+          <div class="home-purchase-track">
+            {purchaseChannels.map(([name, logo], index) => (
+              <figure class="home-purchase-logo" role="group" aria-roledescription="slide" aria-label={`${index + 1} / ${purchaseChannels.length}：${name}`}>
+                <img src={logo} alt={`${name}示意 Logo`} loading="lazy" />
+              </figure>
+            ))}
+          </div>
+        </div>
+        <div class="home-purchase-dots" aria-label="選擇通路 Logo">
+          {purchaseChannels.map(([name], index) => (
+            <button type="button" class:list={["home-purchase-dot", { active: index === 0 }]} data-purchase-slide={index} aria-label={`顯示${name}`} aria-current={index === 0 ? "true" : undefined}></button>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="home-contact-band" aria-labelledby="home-contact-title">
+      <div class="shell home-contact-grid">
+        <div>
+          <p class="home-eyebrow light"><span></span>WE ARE HERE TO HELP</p>
+          <h2 id="home-contact-title">有產品、通路或合作問題？</h2>
+          <p>請留下您的需求，我們將盡快回覆您。</p>
+        </div>
+        <a class="home-button home-button-light" href="/contact/">聯絡我們 <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const viewport = document.querySelector<HTMLElement>(".home-purchase-viewport");
+    const slides = [...document.querySelectorAll<HTMLElement>(".home-purchase-logo")];
+    const dots = [...document.querySelectorAll<HTMLButtonElement>(".home-purchase-dot")];
+    let activeSlide = 0;
+    let carouselTimer = 0;
+
+    const updateDots = (index: number) => {
+      activeSlide = index;
+      dots.forEach((dot, dotIndex) => {
+        const active = dotIndex === index;
+        dot.classList.toggle("active", active);
+        if (active) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+      });
+    };
+
+    const showSlide = (index: number, behavior: ScrollBehavior = "smooth") => {
+      const slide = slides[index];
+      if (!viewport || !slide) return;
+      viewport.scrollTo({
+        left: slide.offsetLeft - (viewport.clientWidth - slide.offsetWidth) / 2,
+        behavior,
+      });
+      updateDots(index);
+    };
+
+    dots.forEach((dot, index) => dot.addEventListener("click", () => showSlide(index)));
+
+    let scrollFrame = 0;
+    viewport?.addEventListener("scroll", () => {
+      window.cancelAnimationFrame(scrollFrame);
+      scrollFrame = window.requestAnimationFrame(() => {
+        const center = viewport.scrollLeft + viewport.clientWidth / 2;
+        const closest = slides.reduce((best, slide, index) => {
+          const distance = Math.abs(slide.offsetLeft + slide.offsetWidth / 2 - center);
+          return distance < best.distance ? { index, distance } : best;
+        }, { index: 0, distance: Number.POSITIVE_INFINITY });
+        updateDots(closest.index);
+      });
+    }, { passive: true });
+
+    const stopCarousel = () => window.clearInterval(carouselTimer);
+    const startCarousel = () => {
+      stopCarousel();
+      if (!slides.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      carouselTimer = window.setInterval(() => showSlide((activeSlide + 1) % slides.length), 4500);
+    };
+
+    viewport?.addEventListener("pointerenter", stopCarousel);
+    viewport?.addEventListener("pointerleave", startCarousel);
+    viewport?.addEventListener("focusin", stopCarousel);
+    viewport?.addEventListener("focusout", startCarousel);
+    startCarousel();
+  </script>
+</BaseLayout>
