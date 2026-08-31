@@ -1,0 +1,67 @@
+---
+import NewsCard from "@/components/NewsCard.astro";
+import Pagination from "@/components/Pagination.astro";
+
+interface Props {
+  entries: any[];
+  categories: string[];
+  basePath: string;
+  currentPage: number;
+  totalPages: number;
+  summaryLabel: string;
+  emptyMessage?: string;
+}
+
+const {
+  entries,
+  categories,
+  basePath,
+  currentPage,
+  totalPages,
+  summaryLabel,
+  emptyMessage = "此分類目前沒有文章。",
+} = Astro.props;
+---
+
+<div class="article-archive" data-article-archive data-summary-label={summaryLabel}>
+  <div class="filter-bar" aria-label={`${summaryLabel}分類`}>
+    <button class="filter-button active" type="button" aria-pressed="true" data-archive-filter="all">全部</button>
+    {categories.map((category) => <button class="filter-button" type="button" aria-pressed="false" data-archive-filter={category}>{category}</button>)}
+  </div>
+  <p class="filter-summary" data-archive-summary aria-live="polite">本頁顯示 <strong>{entries.length}</strong> {summaryLabel}</p>
+  <div class="news-grid" data-archive-grid>
+    {entries.map((entry) => <NewsCard entry={entry} basePath={basePath} />)}
+  </div>
+  <div class:list={["empty-state", { "is-visible": entries.length === 0 }]} data-archive-empty>{emptyMessage}</div>
+  <Pagination basePath={basePath} currentPage={currentPage} totalPages={totalPages} />
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-article-archive]").forEach((archive) => {
+    const buttons = archive.querySelectorAll<HTMLButtonElement>("[data-archive-filter]");
+    const cards = archive.querySelectorAll<HTMLElement>(".news-card");
+    const empty = archive.querySelector<HTMLElement>("[data-archive-empty]");
+    const summary = archive.querySelector<HTMLElement>("[data-archive-summary]");
+    const summaryLabel = archive.dataset.summaryLabel || "篇文章";
+
+    buttons.forEach((button) => button.addEventListener("click", () => {
+      const selected = button.dataset.archiveFilter || "all";
+      let shown = 0;
+
+      buttons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+
+      cards.forEach((card) => {
+        const visible = selected === "all" || card.dataset.category === selected;
+        card.classList.toggle("is-hidden", !visible);
+        if (visible) shown += 1;
+      });
+
+      empty?.classList.toggle("is-visible", shown === 0);
+      if (summary) summary.innerHTML = `本頁顯示 <strong>${shown}</strong> ${summaryLabel}`;
+    }));
+  });
+</script>

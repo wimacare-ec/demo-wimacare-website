@@ -8,13 +8,23 @@ import { archivePageEntries, totalArchivePages } from "@/lib/pagination";
 const categories = ["保健新知", "飲食指南", "成分功效"];
 const knowledge = (await getCollection("knowledge", ({ data }) => !data.draft))
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
-const entries = archivePageEntries(knowledge, 1);
 const totalPages = totalArchivePages(knowledge.length);
+
+export async function getStaticPaths() {
+  const entries = await getCollection("knowledge", ({ data }) => !data.draft);
+  const pages = totalArchivePages(entries.length);
+  return Array.from({ length: Math.max(0, pages - 1) }, (_, index) => ({
+    params: { page: String(index + 2) },
+  }));
+}
+
+const currentPage = Number(Astro.params.page);
+const entries = archivePageEntries(knowledge, currentPage);
 ---
 
-<BaseLayout title="健康知識｜威馬康健" description="閱讀威馬康健整理的保健新知、飲食指南與成分功效文章。" pageClass="interior-page knowledge-list-page">
+<BaseLayout title={`健康知識｜第 ${currentPage} 頁｜威馬康健`} description="閱讀威馬康健整理的保健新知、飲食指南與成分功效文章。" pageClass="interior-page knowledge-list-page">
   <PageHero background eyebrow="HEALTH KNOWLEDGE" title="健康知識" description="以清楚易懂的方式整理保健新知、飲食指南與成分功效，協助您建立適合自己的健康知識基礎。" />
   <section class="section"><div class="shell">
-    <ArticleArchive entries={entries} categories={categories} basePath="/knowledge" currentPage={1} totalPages={totalPages} summaryLabel="篇文章" emptyMessage="目前尚無健康知識文章，內容準備中。" />
+    <ArticleArchive entries={entries} categories={categories} basePath="/knowledge" currentPage={currentPage} totalPages={totalPages} summaryLabel="篇文章" emptyMessage="目前尚無健康知識文章，內容準備中。" />
   </div></section>
 </BaseLayout>

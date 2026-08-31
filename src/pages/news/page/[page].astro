@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+import ArticleArchive from "@/components/ArticleArchive.astro";
+import { archivePageEntries, totalArchivePages } from "@/lib/pagination";
+
+const news = (await getCollection("news", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+const totalPages = totalArchivePages(news.length);
+
+export async function getStaticPaths() {
+  const entries = await getCollection("news", ({ data }) => !data.draft);
+  const pages = totalArchivePages(entries.length);
+  return Array.from({ length: Math.max(0, pages - 1) }, (_, index) => ({
+    params: { page: String(index + 2) },
+  }));
+}
+
+const currentPage = Number(Astro.params.page);
+const entries = archivePageEntries(news, currentPage);
+---
+
+<BaseLayout title={`最新消息｜第 ${currentPage} 頁｜威馬康健`} description="查看威馬康健官方聲明、產品新訊、媒體報導與近期活動。" pageClass="interior-page news-list-page">
+  <PageHero background eyebrow="NEWS & PRESS" title="最新消息" description="官方聲明、產品新訊、媒體報導與近期活動由 TinaCMS 管理；內容更新後會經 GitHub 與 Cloudflare 自動發布。" />
+  <section class="section"><div class="shell">
+    <ArticleArchive entries={entries} categories={["官方聲明", "產品新訊", "媒體報導", "近期活動"]} basePath="/news" currentPage={currentPage} totalPages={totalPages} summaryLabel="則消息" />
+  </div></section>
+</BaseLayout>
