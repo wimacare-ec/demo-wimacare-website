@@ -1,22 +1,23 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHero from "@/components/PageHero.astro";
+import { sitePath } from "@/lib/site-path";
 
 const channelGroups = [
   {
     id: "community-pharmacy",
     label: "社區藥局",
     products: [
-      ["VEGETARIAN CARE", "素食保健系列", "以「植萃營養，安心有效」為品牌理念，打造專業的素食保健食品"],
-      ["DAILY CARE", "葷食保健系列", "適合建立每日保養習慣的基礎，對應忙碌生活與多元日常需求。"],
+      { pack: "VEGETARIAN CARE", title: "素食保健系列", description: "以「植萃營養，安心有效」為品牌理念，打造專業的素食保健食品", image: undefined },
+      { pack: "DAILY CARE", title: "葷食保健系列", description: "適合建立每日保養習慣的基礎，對應忙碌生活與多元日常需求。", image: undefined },
     ],
   },
   {
     id: "chain-drugstore",
     label: "連鎖藥妝",
     products: [
-      ["VEGETARIAN CARE", "素食保健系列", "以「植萃營養，安心有效」為品牌理念，打造專業的素食保健食品"],
-      ["DAILY CARE", "葷食保健系列", "適合建立每日保養習慣的基礎，對應忙碌生活與多元日常需求。"],
+      { pack: "VEGETARIAN CARE", title: "素食保健系列", description: "以「植萃營養，安心有效」為品牌理念，打造專業的素食保健食品", image: sitePath("/products/veg-KA.jpg") },
+      { pack: "DAILY CARE", title: "葷食保健系列", description: "適合建立每日保養習慣的基礎，對應忙碌生活與多元日常需求。", image: sitePath("/products/non-veg-KA.jpg") },
     ],
   },
 ];
@@ -55,12 +56,14 @@ const channelGroups = [
           hidden={index !== 0}
         >
           <div class="product-grid">
-            {channel.products.map(([pack, title, description]) => (
-              <article class="product-card">
-                <div class="visual"><div class="mini-pack">{pack}</div></div>
+            {channel.products.map((product) => (
+              <article class:list={["product-card", { "product-card--with-image": Boolean(product.image) }]}>
+                <div class:list={["visual", { "is-product-image": Boolean(product.image) }]}>
+                  {product.image ? <img src={product.image} alt={`${product.title}商品陳列`} loading="lazy" /> : <div class="mini-pack">{product.pack}</div>}
+                </div>
                 <small>{channel.label} · WIMA CARE</small>
-                <h2>{title}</h2>
-                <p>{description}</p>
+                <h2>{product.title}</h2>
+                <p>{product.description}</p>
               </article>
             ))}
           </div>

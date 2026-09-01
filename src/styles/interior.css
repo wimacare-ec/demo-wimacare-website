@@ -356,6 +356,23 @@
   background: linear-gradient(145deg, color-mix(in srgb, var(--brand-highlight) 46%, #fff), var(--brand-surface));
 }
 
+.interior-page .product-card .visual.is-product-image {
+  height: auto;
+  aspect-ratio: 10 / 7;
+  background: #fff;
+}
+
+.interior-page .product-card .visual.is-product-image::after {
+  display: none;
+}
+
+.interior-page .product-card .visual.is-product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
 .interior-page .product-card:nth-child(2) .visual {
   background: linear-gradient(145deg, color-mix(in srgb, var(--brand-accent) 20%, #fff), var(--brand-surface));
 }
