@@ -22,7 +22,7 @@
 
 ## 本機開發
 
-需求：Node.js 22 或 24（`>=22.13.0 <25`）。TinaCMS 尚未支援 Node.js 26；專案提供 `.nvmrc`，使用 nvm 時可先執行 `nvm use`。
+需求：Node.js 22.13 或更新版本。專案提供 `.nvmrc` 並固定在 Node.js 22 作為建議開發版本；目前的 Astro 與 TinaCMS 也可在本機 Node.js 26 執行。
 
 ```bash
 npm install

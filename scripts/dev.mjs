@@ -1,12 +1,12 @@
 import { spawn } from "node:child_process";
 import { resolve } from "node:path";
 
-const nodeMajor = Number(process.versions.node.split(".")[0]);
+const [nodeMajor, nodeMinor] = process.versions.node.split(".").map(Number);
 
-if (![22, 24].includes(nodeMajor)) {
+if (nodeMajor < 22 || (nodeMajor === 22 && nodeMinor < 13)) {
   console.error(
-    `\nThis project requires Node.js 22 or 24. Current version: ${process.version}\n` +
-      "Run `nvm use` or place Homebrew node@22 first in PATH, then retry.\n",
+    `\nThis project requires Node.js 22.13 or newer. Current version: ${process.version}\n` +
+      "Run `nvm use` or install a current Node.js release, then retry.\n",
   );
   process.exit(1);
 }
@@ -28,7 +28,8 @@ const astro = spawn(
   [astroBin, "dev", "--host", host, "--port", port],
   {
     cwd: root,
-    env: process.env,
+    // Keep Astro attached so this launcher can stop both services together.
+    env: { ...process.env, ASTRO_DEV_BACKGROUND: "0" },
     stdio: "inherit",
   },
 );
@@ -58,9 +59,9 @@ tina.once("exit", (code, signal) => {
 });
 
 astro.once("exit", (code, signal) => {
-  if (!stopping && code) {
-    console.error(`Astro stopped unexpectedly (${signal || code}).`);
+  if (!stopping) {
+    console.error(`Astro stopped unexpectedly (${signal || code || 1}).`);
     stop();
-    process.exitCode = code;
+    process.exitCode = code || 1;
   }
 });
