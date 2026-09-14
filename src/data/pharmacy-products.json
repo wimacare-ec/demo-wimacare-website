@@ -1,0 +1,362 @@
+{
+  "products": [
+    {
+      "id": "wimacare-hibinamin-max-tab-60",
+      "benefit": "充沛活力",
+      "name": "合他賜康® 雙效活力B EX錠",
+      "price": 1280,
+      "packageSize": "60粒",
+      "diet": "純素",
+      "salesChannel": "社區藥局",
+      "featureLead": "為高強度專注、忙碌奔波族打造的活力配方！\n脂溶型 × 長效型雙 B1，持久續航，維持充沛活力。",
+      "featurePoints": [
+        "脂溶型維生素 B1 誘導體，補給效率再升級",
+        "長效型活性維生素 B1 ，雙 B1 協同補給",
+        "維生素 B12 ，有助於增進神經系統健康",
+        "維生素 B6 × 菸鹼素，有助於維持能量正常代謝",
+        "維生素 C ，具抗氧化作用、增強保護力",
+        "γ-穀維素 50 毫克 × MSM ，多元活力加乘"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5NjgwNTQyLzE3ODUzODg3MzVfNzcxNTY2NWM2NGExMzVjNDU0ODQuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=2d72e6128149d1a6",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-hibinamin-max-tab-60"
+    },
+    {
+      "id": "wimacare-wonder-med-tab-vegan-60",
+      "benefit": "紓壓放鬆",
+      "name": "想得鎂®胺基酸鎂複方錠",
+      "price": 880,
+      "packageSize": "60粒",
+      "diet": "純素",
+      "salesChannel": "社區藥局",
+      "featureLead": "分時釋放精準調節 日間啟動活力，夜間安穩充電。\n七種來源鎂 × 維生素 B6 × 植物來源 D3。",
+      "featurePoints": [
+        "七種來源鎂複方，多型態一次補給",
+        "鎂有助於心臟、肌肉及神經的正常功能",
+        "鎂有助於維持醣類正常代謝及骨骼健康",
+        "維生素 B6 有助於維持能量正常代謝及神經系統健康",
+        "植物來源維生素 D3，促進鈣吸收、維持骨骼與牙齒健康"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5NTk1OTY2LzE3ODQ4ODQ3OTFfOGExNWExZTFhYzI3NDg0N2NkMTcuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=117d5f1af6a2c3d3",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-wonder-med-tab-vegan-60"
+    },
+    {
+      "id": "wimacare-cal-citrate-tab-60",
+      "benefit": "關鍵靈活",
+      "name": "鈣健鎂®檸檬酸鈣錠",
+      "price": 620,
+      "packageSize": "60粒",
+      "diet": "奶素",
+      "salesChannel": "社區藥局",
+      "featureLead": "專為成長期與熟齡族打造的全方位鈣質複方！\n檸檬酸鈣 × 鎂鋅銅錳 × 維生素 D3，鞏固根本，維持靈活。",
+      "featurePoints": [
+        "檸檬酸鈣，補充日常所需鈣質",
+        "鈣有助於維持骨骼與牙齒的正常發育及健康",
+        "鎂有助於心臟、肌肉及神經的正常功能",
+        "維生素 D3，可促進鈣吸收、維持血鈣平衡",
+        "鋅有助於維持正常代謝及生長發育",
+        "銅 × 錳，有助於結締組織形成及骨骼健康",
+        "添加酪蛋白磷酸肽，完善鈣質複方設計"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5Nzk3MjU4LzE3ODQ4ODM0NTFfNjA5N2QzYjlhMWM5NzhjZjMxOGUuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=492be8a5643d9728",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-cal-citrate-tab-60"
+    },
+    {
+      "id": "wimacare-benformin-b-vegan-capsules-60",
+      "benefit": "充沛活力",
+      "name": "本福命® B群緩釋微粒膠囊",
+      "price": 980,
+      "packageSize": "60粒",
+      "diet": "純素",
+      "salesChannel": "社區藥局",
+      "featureLead": "長時間與高耗能生活打造的緩釋 B 群！\n分時釋放 × 脂溶型 B1 × 高單位 B12，全天候持續補給。",
+      "featurePoints": [
+        "長效分時緩釋微粒，延長 B 群營養釋放",
+        "脂溶型維生素 B1，有助於維持能量正常代謝",
+        "維生素 B12，有助於增進神經系統健康",
+        "B2 × B3 × B5，多元營養協同補給",
+        "維生素 B6，有助於維持胺基酸正常代謝",
+        "葉酸 × 生物素，有助於紅血球形成及正常代謝"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5Njc4NDkzLzE3ODQ4ODI1NTZfNzI4NDVjOTNlNjJiMDNjMzJkMzcuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=e59f2a868a23ac90",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-benformin-b-vegan-capsules-60"
+    },
+    {
+      "id": "wimacare-immu-zn-tab-vegan-60",
+      "benefit": "充沛活力",
+      "name": "滿意力鋅®胺基酸螯合鋅錠",
+      "price": 1580,
+      "packageSize": "60粒",
+      "diet": "純素",
+      "salesChannel": "社區藥局",
+      "featureLead": "適合打拼族與熟齡者的鋅+草本植萃衝勁配方！\nL-OptiZinc® 螯合鋅 × 人蔘 × 瑪卡 × Q10，日常續航，維持滿意活力。",
+      "featurePoints": [
+        "L-OptiZinc® 專利胺基酸螯合鋅，高品質營養",
+        "鋅有助於維持正常代謝及生殖機能",
+        "L-精胺酸 × L-肉酸，雙胺基酸衝勁元氣",
+        "人蔘 × 瑪卡 × 南瓜籽，多元植物精華加乘",
+        "輔酵素 Q10 × NAD⁺，完善活力營養",
+        "維生素 B 群，有助於維持能量正常代謝"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5NTk2NzM2LzE3ODQ5NTYxMjFfOTBmMDYwYWI2YjYwODdlYzc0MDMuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=b61403d9e51dbbee",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-immu-zn-tab-vegan-60"
+    },
+    {
+      "id": "wimacare-vitality-formula-vegan-capsules-60",
+      "benefit": "美妍透亮",
+      "name": "活力佳® NMN複方膠囊",
+      "price": 1980,
+      "packageSize": "60粒",
+      "diet": "純素",
+      "salesChannel": "社區藥局",
+      "featureLead": "為忙碌快節奏與熟齡保養打造的全方位複方！\nNMN × NAD+ × PQQ × Q10，維持青春美麗。",
+      "featurePoints": [
+        "毛豆來源高單位 NMN，補充核心營養",
+        "NAD+ × NADH，多元能量營養協同補給",
+        "菸鹼醯胺 × 菸鹼酸，有助於維持能量正常代謝",
+        "納豆來源 PQQ × 輔酶 Q10，營養加乘",
+        "白藜蘆醇 × 槲皮素 × 硫辛酸，植化營養",
+        "色胺酸，補充人體必需胺基酸"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5Njc5NTA4LzE3ODQ4ODUwNTRfM2ZhOWY5NzcxNGQ2ZGUwM2UyNzUuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=2808e39e5722d6e0",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-vitality-formula-vegan-capsules-60"
+    },
+    {
+      "id": "wimacare-mk7-ca-glycinate-multiple-ex-vegan-60",
+      "benefit": "關鍵靈活",
+      "name": "鈣健鎂® MK7甘胺酸螯合鈣錠",
+      "price": 980,
+      "packageSize": "60粒",
+      "diet": "純素",
+      "salesChannel": "社區藥局",
+      "featureLead": "專為熟齡與蔬食族打造的進階鈣質複方！\n甘胺酸螯合鈣 × MK-7 K2 × 植物 D3 × 維生素 C，多重協同，穩固健康。",
+      "featurePoints": [
+        "每份含鈣 480 毫克，甘胺酸螯合型態好吸收",
+        "海藻來源維生素 D3 ，可促進鈣吸收、維持血鈣平衡",
+        "維生素 C 150 毫克，促進膠原蛋白形成",
+        "甘胺酸鎂，有助於心臟、肌肉及神經的正常功能",
+        "鋅 × 銅 × 錳 × 硼，多元螯合礦物質完整補給"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5NDcxMDk5LzE3ODUxMjI3OTRfYWFkZjFkNWI1MWNkYjY3YTg0MGUuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=5b11523a52e00a65",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-mk7-ca-glycinate-multiple-ex-vegan-60"
+    },
+    {
+      "id": "wimacare-precollagen-pregsh-formula-28",
+      "benefit": "美妍透亮",
+      "name": "素倍膠源® Plus素膠源機能粉末",
+      "price": 1980,
+      "packageSize": "28包",
+      "diet": "純素",
+      "salesChannel": "社區藥局",
+      "featureLead": "不吃動物性膠原蛋白，也能從源頭補充膠原生成營養！\n三重胺基酸 × 維生素 C × 麥角硫因，綻放光采。",
+      "featurePoints": [
+        "甘胺酸，膠原蛋白的重要組成胺基酸",
+        "半胱胺酸 × 甘胺酸，提供穀胱甘肽前驅營養",
+        "維生素 C可促進膠原蛋白形成並具抗氧化作用",
+        "TMG 三甲基甘胺酸，日常代謝所需營養",
+        "珍稀麥角硫因 × Q10 × 維生素 P，青春營養加乘",
+        "純素配方，酸甜水果風味，日常補充更輕鬆"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5NzEyMDE1LzE3ODQ4ODU1ODBfNzMyNWRhMzcyYTBkYzJlZDQyYTkuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=25992a8dc0b5a145",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-precollagen-pregsh-formula-28"
+    },
+    {
+      "id": "wimacare-sustained-c-cap-60",
+      "benefit": "美妍透亮",
+      "name": "長效緩釋維生素C 膠囊",
+      "price": 880,
+      "packageSize": "60粒",
+      "diet": "純素",
+      "salesChannel": "社區藥局",
+      "featureLead": "忙碌節奏與重視保養者打造的維生素C 長效補給！\n植化素複合 C × 12 小時分時緩釋，不靠瞬間爆發。",
+      "featurePoints": [
+        "左旋維生素 C 400 毫克，高單位抗氧化補給",
+        "生物類黃酮 × 橙皮苷，複方加乘",
+        "12 小時分時緩釋小球，延長營養補給時間",
+        "維生素 C 有助於促進膠原蛋白形成",
+        "維生素 C 有助於鐵質吸收，並維持細胞排列的緊密性"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5OTgwMjM2LzE3ODQ5NTgxMDBfZmFkM2FmN2JlOWNmMTNiZTczM2MuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=0165859dc7823069",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-sustained-c-cap-60"
+    },
+    {
+      "id": "wimacare-calo-cut-vegan-cap-60",
+      "benefit": "飲食控制",
+      "name": "好壽®使麗登® 卡切複方膠囊",
+      "price": 980,
+      "packageSize": "60粒",
+      "diet": "純素",
+      "salesChannel": "社區藥局",
+      "featureLead": "為大餐、外食與自律管理族打造的日常補給！\n藤黃果 × 蘋果醋 × 褐藻 × 葡萄柚，餐前一粒。",
+      "featurePoints": [
+        "藤黃果萃取，流行的核心植萃",
+        "蘋果醋，補充天然發酵營養",
+        "大豆卵磷脂，提供重要磷脂營養",
+        "褐藻 × 葡萄柚油，多元植萃加乘",
+        "黃金菊萃取，完善植物複方設計",
+        "維生素 B6，有助於維持能量正常代謝"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5OTgwMjQwLzE3ODQ5NTg1ODRfOGNiNTMyZWNhZTEyMTAxYWFiYzkuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=c0320725ce2d01f6",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-calo-cut-vegan-cap-60"
+    },
+    {
+      "id": "wimacare-cytoregenes-vegan-capsules-60",
+      "benefit": "飲食控制",
+      "name": "好壽®賽多珍 複方膠囊",
+      "price": 980,
+      "packageSize": "60粒",
+      "diet": "純素",
+      "salesChannel": "社區藥局",
+      "featureLead": "適合重視自律保養族群的植萃複方！\n白藜蘆醇 × 葡萄籽 × HCA® 藤黃果 × 槲皮素，補給年輕活力。",
+      "featurePoints": [
+        "白藜蘆醇，補充紅酒多酚精華",
+        "葡萄籽萃取，原花青素的營養加乘",
+        "HCA 藤黃果萃取，自律管理核心植萃",
+        "槲皮素，補充天然類黃酮營養",
+        "L-精胺酸，補充日常所需胺基酸"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzcxMjMwMjY1LzE3ODY3MDQyMjJfOGI4YTgzOTU5Yzc3YTg3MzM1NWQuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=14c7324de8f43dff",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-cytoregenes-vegan-capsules-60"
+    },
+    {
+      "id": "wimacare-wima-eycare-cap-60",
+      "benefit": "晶亮有神",
+      "name": "愛視康 ®葉黃素複方軟膠囊",
+      "price": 1120,
+      "packageSize": "60粒",
+      "diet": "葷食",
+      "salesChannel": "社區藥局",
+      "featureLead": "專為現代 3C 高度依賴者打造的晶亮複方！\n讓面對螢幕或外在環境，都能維持晶亮有神！",
+      "featurePoints": [
+        "30毫克 游離型葉黃素，足量添加",
+        "８ in 1黃金複方，長期補充晶亮營養",
+        "山桑子與小米草雙植萃，有感加乘",
+        "維生素A有助於維持在暗處的視覺",
+        "維生素B12 能增進神經系統的健康",
+        "多元微量礦物質 ✕ 牛磺酸，多元營養補給",
+        "晶亮健康、年長者晶亮維持必備"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5ODQ5ODQyLzE3ODQ5NjAzMjBfMjZhYTZkZjVmNTVhN2EzNGY1YjcuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=3873ce8d2be79676",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-wima-eycare-cap-60"
+    },
+    {
+      "id": "wimacare-wima-hyper-omega-700-60",
+      "benefit": "循環代謝",
+      "name": "威邁通® 魚油軟膠囊",
+      "price": 1000,
+      "packageSize": "60粒",
+      "diet": "葷食",
+      "salesChannel": "社區藥局",
+      "featureLead": "為少吃魚、飲食不均衡者的純淨高濃度優質魚油！\n高單位 rTG 型態Omega-3，高效補充 EPA、DHA",
+      "featurePoints": [
+        "高單位 Omega-3，減少多餘油脂攝取",
+        "每粒含 710 毫克 Omega-3，高單位補給",
+        "每粒EPA 300 毫克 + DHA 200 毫克，雙重關鍵脂肪酸",
+        "rTG 型精製魚油，吸收利用率佳",
+        "深海野生小型魚來源，降低重金屬累積疑慮"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5Nzk4NDI2LzE3ODUyODc2MTFfZWE5NTMyYTFmYzExNmI4NTYzODcuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=19b7d8aa1cd9e646",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-wima-hyper-omega-700-60"
+    },
+    {
+      "id": "wimacare-wima-may-comfort-tab-60",
+      "benefit": "關鍵靈活",
+      "name": "美克福®葡萄糖胺複方錠",
+      "price": 1120,
+      "packageSize": "60粒",
+      "diet": "葷食",
+      "salesChannel": "社區藥局",
+      "featureLead": "重拾靈活節奏，為運動族與熟齡族打造的行動配方！\n二型膠原蛋白 × 葡萄糖胺 × 軟骨素 × MSM，層層支撐，自在好動。",
+      "featurePoints": [
+        "非變性二型膠原蛋白，補給關鍵營養",
+        "葡萄糖胺，提供日常活動營養支持",
+        "軟骨素，有助維持舒適靈活",
+        "MSM，多元關鍵營養加乘",
+        "檸檬酸鈣，有助於維持骨骼與牙齒健康",
+        "維生素 D3，可促進鈣吸收、維持血鈣平衡"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5ODM3Mzk2LzE3ODQ5NjA2NTNfMTYxM2ZmN2EzN2VkNGFiM2VhZWYuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=55608cb8f05ce05d",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-wima-may-comfort-tab-60"
+    },
+    {
+      "id": "wimacare-nigella-plus-cap-60",
+      "benefit": "防護升級",
+      "name": "費淨康®精油複方軟膠囊",
+      "price": 1580,
+      "packageSize": "60粒",
+      "diet": "葷食",
+      "salesChannel": "社區藥局",
+      "featureLead": "為通勤與密閉環境打造的清新植萃複方！\n黑種草籽油 × 藍桉 × 薄荷 × 高良薑，清新舒爽，維持好狀態。",
+      "featurePoints": [
+        "每粒含黑種草籽油 250 毫克，植萃油脂營養",
+        "每粒含藍桉葉精油 200 毫克，清新草本核心",
+        "薄荷精油 40 毫克，清涼舒爽氣息",
+        "高良薑精油 13 毫克，辛香植萃加乘",
+        "四重植物精油複方，多層次日常保養",
+        "軟膠囊可食用、外用或芳香使用"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5ODMxODI5LzE3ODUxNDAxNjZfMjMyMmViYzg1Nzk4OWE0OTRjNWEuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=eb713172fa15fd45",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-nigella-plus-cap-60"
+    },
+    {
+      "id": "wimacare-solugel-5000-36",
+      "benefit": "美妍透亮",
+      "name": "舒麗肽® 胜肽即溶膠原蛋白粉",
+      "price": 2400,
+      "packageSize": "36包",
+      "diet": "葷食",
+      "salesChannel": "社區藥局",
+      "featureLead": "身體的純粹補給！拒絕糖份、香料與多餘化學添加物。\n小分子活性胜肽 × 100% 膠原蛋白，即溶好吸收。\n為美麗保養與日常活動打造的純膠原補給！",
+      "featurePoints": [
+        "德國 SOLUGEL® 5000，高品質水解膠原蛋白胜肽",
+        "5000 道爾頓以下小分子，提升吸收利用",
+        "100% 純膠原蛋白，補充身體重要結構營養",
+        "低溫活性製程，保留膠原蛋白營養",
+        "非水產動物來源，無魚腥味",
+        "獨立隨身包，細緻粉末快溶，百搭冷熱飲品"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzY5NzQ5ODg0LzE3ODQ5NTU4MThfZmQ3ODJjOTk1MDg2NDExYWUxZjMuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=f3816593b4a89539",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-solugel-5000-36"
+    },
+    {
+      "id": "wimacare-wima-best-iso-vip-cap-90",
+      "benefit": "熟齡保養",
+      "name": "婦美康®大豆異黃酮複方膠囊",
+      "price": 1180,
+      "packageSize": "90粒",
+      "diet": "葷食",
+      "salesChannel": "社區藥局",
+      "featureLead": "專為輕熟齡與熟齡女性補充日常底氣！\n大豆異黃酮 × 葡萄籽 × 維生素E，調節生理機能",
+      "featurePoints": [
+        "大豆異黃酮，女性日常保養核心營養",
+        "葡萄籽花青素，多元植萃營養加乘",
+        "維生素E具抗氧化作用，有助於減少自由基產生",
+        "維生素E增進皮膚與血球健康",
+        "泛酸有助於維持能量正常代謝",
+        "泛酸增進皮膚與黏膜的健康"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzcxMTk4NTQ0LzE3ODY1OTkyNTBfNjBiOTBjNTI2NzFhYmUxNGZjYTMuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=38994e10887dd9a4",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-wima-best-iso-vip-cap-90"
+    },
+    {
+      "id": "wimacare-wima-exell-hapavita-90",
+      "benefit": "充沛活力",
+      "name": "佳利康®活力維他命B群 軟膠囊",
+      "price": 1280,
+      "packageSize": "90粒",
+      "diet": "葷食",
+      "salesChannel": "社區藥局",
+      "featureLead": "忙碌外食與高耗能生活打造的黃金複方！\n肝精 × 維生素 B 群 × 鐵鋅鎂 × 蛋胺酸，補給活力。",
+      "featurePoints": [
+        "B1 × B2 × B6 × B12，有助於維持能量正常代謝及神經系統健康",
+        "葉酸 × 維生素 B12 × 鐵，有助於紅血球形成",
+        "肝精 × 酵母，補充多元維生素與營養精華",
+        "DL-蛋胺酸 × 膽鹼 × 肌醇，複方營養加乘",
+        "維生素 C × 維生素 E，具抗氧化作用",
+        "鋅 × 鎂，有助於維持正常代謝及肌肉、神經正常功能",
+        "β-胡蘿蔔素 × 生物素 × 泛酸，完善日常營養支持"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/media/W1siZiIsIjI2NTQ4L3Byb2R1Y3RzLzcxMTE5MjYzLzE3ODY2MTEyMTdfYTUwNDZmYzc1OWEwNDI1MDRkMmEuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=3f95cba25bcfe723",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-wima-exell-hapavita-90"
+    }
+  ]
+}

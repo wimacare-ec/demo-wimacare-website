@@ -1,0 +1,127 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+import pharmacyProducts from "@/data/pharmacy-products.json";
+
+type Product = (typeof pharmacyProducts.products)[number];
+
+const products: Product[] = pharmacyProducts.products;
+const formatPrice = (price: number) => new Intl.NumberFormat("zh-TW").format(price);
+const seriesFor = (diet: string) => diet === "葷食" ? "non-vegetarian" : "vegetarian";
+---
+
+<BaseLayout
+  title="社區藥局系列｜威馬康健"
+  description="瀏覽威馬康健於社區藥局販售的素食保健系列與葷食保健系列商品。"
+  pageClass="interior-page rx-products-page"
+>
+  <PageHero
+    background
+    eyebrow="COMMUNITY PHARMACY"
+    title="社區藥局系列"
+    description="透過在地社區藥局的專業服務，依日常保養需求選擇合適的威馬康健產品系列。"
+  />
+
+  <section class="section rx-product-directory" aria-labelledby="rx-products-title">
+    <div class="shell">
+      <header class="rx-product-directory-heading">
+        <div>
+          <p class="eyebrow">WIMA CARE PRODUCTS</p>
+          <h2 id="rx-products-title">社區藥局產品系列</h2>
+        </div>
+        <p>商品實際販售狀況與庫存依各藥局門店為準，產品資訊請以商品包裝及官方商城公告為準。</p>
+      </header>
+
+      <div class="rx-product-filter" role="group" aria-label="產品系列篩選">
+        <button class="rx-product-filter-button is-active" type="button" aria-pressed="true" data-product-series="all">全部商品</button>
+        <button class="rx-product-filter-button" type="button" aria-pressed="false" data-product-series="vegetarian">素食保健系列</button>
+        <button class="rx-product-filter-button" type="button" aria-pressed="false" data-product-series="non-vegetarian">葷食保健系列</button>
+      </div>
+      <p class="rx-product-summary" id="rx-product-summary" aria-live="polite">目前顯示 {products.length} 項商品</p>
+
+      <div class="rx-product-list" id="rx-product-list">
+        {products.map((product) => (
+          <article class="rx-product-card" id={product.id} data-product-card data-series={seriesFor(product.diet)}>
+            <div class="rx-product-overview">
+              <figure class="rx-product-visual">
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  loading="lazy"
+                  decoding="async"
+                  referrerpolicy="no-referrer"
+                />
+              </figure>
+              <div class="rx-product-identity">
+                <h2>{product.name}</h2>
+                <dl class="rx-product-specs">
+                  <div>
+                    <dt>規格入數</dt>
+                    <dd>{product.packageSize}</dd>
+                  </div>
+                  <div>
+                    <dt>建議售價</dt>
+                    <dd>NT$ {formatPrice(product.price)}</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="rx-product-content">
+              <div class="rx-product-tags">
+                <span>{product.benefit}</span>
+                <span>{product.diet}</span>
+              </div>
+              <div class="rx-product-copy">
+                <p class="rx-product-lead">{product.featureLead}</p>
+                {product.featurePoints.length > 0 && (
+                  <ul>
+                    {product.featurePoints.map((point) => <li>{point}</li>)}
+                  </ul>
+                )}
+              </div>
+              <a
+                class="rx-product-cta"
+                href={product.detailsUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`瞭解更多：${product.name}（於新分頁開啟）`}
+              >瞭解更多 <span aria-hidden="true">››</span></a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="empty-state" id="rx-product-empty" hidden>目前沒有符合此系列的商品。</div>
+    </div>
+  </section>
+
+  <script>
+    const filterButtons = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-product-series]"));
+    const productCards = Array.from(document.querySelectorAll<HTMLElement>("[data-product-card]"));
+    const productSummary = document.querySelector<HTMLElement>("#rx-product-summary");
+    const productEmpty = document.querySelector<HTMLElement>("#rx-product-empty");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const series = button.dataset.productSeries || "all";
+        let visibleCount = 0;
+
+        filterButtons.forEach((item) => {
+          const active = item === button;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-pressed", String(active));
+        });
+
+        productCards.forEach((card) => {
+          const visible = series === "all" || card.dataset.series === series;
+          card.hidden = !visible;
+          if (visible) visibleCount += 1;
+        });
+
+        if (productSummary) productSummary.textContent = `目前顯示 ${visibleCount} 項商品`;
+        if (productEmpty) productEmpty.hidden = visibleCount > 0;
+      });
+    });
+  </script>
+</BaseLayout>
