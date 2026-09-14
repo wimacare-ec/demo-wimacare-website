@@ -1,0 +1,222 @@
+{
+  "products": [
+    {
+      "id": "wimacare-hibinamin-max-tab-60",
+      "benefit": "充沛活力",
+      "name": "合他賜康® 雙效活力B EX錠",
+      "price": 1680,
+      "packageSize": "90粒",
+      "diet": "純素",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "為高強度專注、忙碌奔波族打造的活力配方！\n脂溶型 × 長效型雙 B1，持久續航，維持充沛活力。",
+      "featurePoints": [
+        "脂溶型維生素 B1 誘導體，補給效率再升級",
+        "長效型活性維生素 B1 ，雙 B1 協同補給",
+        "維生素 B12 ，有助於增進神經系統健康",
+        "維生素 B6 × 菸鹼素，有助於維持能量正常代謝",
+        "維生素 C ，具抗氧化作用、增強保護力",
+        "γ-穀維素 50 毫克 × MSM ，多元活力加乘"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_00df7cf0-5d1b-427b-b1fc-119668d3f880.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-hibinamin-max-tab-60"
+    },
+    {
+      "id": "wimacare-wonder-med-tab-vegan-60",
+      "benefit": "紓壓放鬆",
+      "name": "想得鎂®胺基酸鎂複方錠",
+      "price": 1280,
+      "packageSize": "90粒",
+      "diet": "純素",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "分時釋放精準調節 日間啟動活力，夜間安穩充電。\n七種來源鎂 × 維生素 B6 × 植物來源 D3。",
+      "featurePoints": [
+        "七種來源鎂複方，多型態一次補給",
+        "鎂有助於心臟、肌肉及神經的正常功能",
+        "鎂有助於維持醣類正常代謝及骨骼健康",
+        "維生素 B6 有助於維持能量正常代謝及神經系統健康",
+        "植物來源維生素 D3，促進鈣吸收、維持骨骼與牙齒健康"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_0a433c3f-007d-40fe-89d1-c40af785e40f.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-wonder-med-tab-vegan-60"
+    },
+    {
+      "id": "wimacare-cal-citrate-tab-60",
+      "benefit": "關鍵靈活",
+      "name": "鈣健鎂®檸檬酸鈣錠",
+      "price": 980,
+      "packageSize": "90粒",
+      "diet": "奶素",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "專為成長期與熟齡族打造的全方位鈣質複方！\n檸檬酸鈣 × 鎂鋅銅錳 × 維生素 D3，鞏固骨骼健康。",
+      "featurePoints": [
+        "檸檬酸鈣，補充日常所需鈣質",
+        "鈣有助於維持骨骼與牙齒的正常發育及健康",
+        "鎂有助於心臟、肌肉及神經的正常功能",
+        "維生素 D3，可促進鈣吸收、維持血鈣平衡",
+        "鋅有助於維持正常代謝及生長發育",
+        "銅 × 錳，有助於結締組織形成及骨骼健康",
+        "添加酪蛋白磷酸肽，完善鈣質複方設計"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_4568b00f-e5f8-4bf1-8f18-14cab86d2a30.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-cal-citrate-tab-60"
+    },
+    {
+      "id": "wimacare-benformin-b-vegan-capsules-60",
+      "benefit": "充沛活力",
+      "name": "本福命® B群緩釋微粒膠囊",
+      "price": 1380,
+      "packageSize": "90粒",
+      "diet": "純素",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "長時間與高耗能生活打造的緩釋 B 群！\n分時釋放 × 脂溶型 B1 × 高單位 B12，全天候持續補給。",
+      "featurePoints": [
+        "長效分時緩釋微粒，延長 B 群營養釋放",
+        "脂溶型維生素 B1，有助於維持能量正常代謝",
+        "維生素 B12，有助於增進神經系統健康",
+        "B2 × B3 × B5，多元營養協同補給",
+        "維生素 B6，有助於維持胺基酸正常代謝",
+        "葉酸 × 生物素，有助於紅血球形成及正常代謝"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_7ce6db38-6d91-4632-a292-ec9149fc4e25.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-benformin-b-vegan-capsules-60"
+    },
+    {
+      "id": "wimacare-immu-zn-tab-vegan-60",
+      "benefit": "充沛活力",
+      "name": "滿意力鋅®胺基酸螯合鋅錠",
+      "price": 1780,
+      "packageSize": "90粒",
+      "diet": "純素",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "適合打拼族與熟齡者的鋅+草本植萃衝勁配方！\nL-OptiZinc® 螯合鋅 × 人蔘 × 瑪卡 × Q10，日常續航，維持滿意活力。",
+      "featurePoints": [
+        "L-OptiZinc® 專利胺基酸螯合鋅，高品質營養",
+        "鋅有助於維持正常代謝及生殖機能",
+        "L-精胺酸 × L-肉酸，雙胺基酸衝勁元氣",
+        "人蔘 × 瑪卡 × 南瓜籽，多元植物精華加乘",
+        "輔酵素 Q10 × NAD⁺，完善活力營養",
+        "維生素 B 群，有助於維持能量正常代謝"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_aa932070-b269-4b56-946f-2a1d920506cd.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-immu-zn-tab-vegan-60"
+    },
+    {
+      "id": "wimacare-vitality-formula-vegan-capsules-60",
+      "benefit": "美妍透亮",
+      "name": "活力佳® NMN複方膠囊",
+      "price": 1080,
+      "packageSize": "90粒",
+      "diet": "純素",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "為忙碌快節奏與熟齡保養打造的全方位複方！\nNMN × NAD+ × PQQ × Q10，維持青春美麗。",
+      "featurePoints": [
+        "毛豆來源高單位 NMN，補充核心營養",
+        "NAD+ × NADH，多元能量營養協同補給",
+        "菸鹼醯胺 × 菸鹼酸，有助於維持能量正常代謝",
+        "納豆來源 PQQ × 輔酶 Q10，營養加乘",
+        "白藜蘆醇 × 槲皮素 × 硫辛酸，植化營養",
+        "色胺酸，補充人體必需胺基酸"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_a8116309-690d-40db-aca8-07c792f8115e.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-vitality-formula-vegan-capsules-60"
+    },
+    {
+      "id": "wimacare-mk7-ca-glycinate-multiple-ex-vegan-60",
+      "benefit": "關鍵靈活",
+      "name": "鈣健鎂® MK7甘胺酸螯合鈣錠",
+      "price": 1280,
+      "packageSize": "90粒",
+      "diet": "純素",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "專為熟齡與蔬食族打造的進階鈣質複方！\n甘胺酸螯合鈣 × MK-7 K2 × 植物 D3 × 維生素 C，穩固健康。",
+      "featurePoints": [
+        "每份含鈣 480 毫克，甘胺酸螯合型態好吸收",
+        "海藻來源維生素 D3 ，可促進鈣吸收、維持血鈣平衡",
+        "維生素 C 150 毫克，促進膠原蛋白形成",
+        "甘胺酸鎂，有助於心臟、肌肉及神經的正常功能",
+        "鋅 × 銅 × 錳 × 硼，多元螯合礦物質完整補給"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_8052a338-35ea-40a2-b88e-2a8019b5efb7.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-mk7-ca-glycinate-multiple-ex-vegan-60"
+    },
+    {
+      "id": "wimacare-precollagen-pregsh-formula-28",
+      "benefit": "美妍透亮",
+      "name": "素倍膠源® Plus素膠源機能粉末",
+      "price": 1580,
+      "packageSize": "5包",
+      "diet": "純素",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "不吃動物性膠原蛋白，也能從源頭補充膠原生成營養！\n三重胺基酸 × 維生素 C × 麥角硫因，綻放光采。",
+      "featurePoints": [
+        "甘胺酸，膠原蛋白的重要組成胺基酸",
+        "半胱胺酸 × 甘胺酸，提供穀胱甘肽前驅營養",
+        "維生素 C可促進膠原蛋白形成並具抗氧化作用",
+        "TMG 三甲基甘胺酸，日常代謝所需營養",
+        "珍稀麥角硫因 × Q10 × 維生素 P，青春營養加乘",
+        "純素配方，酸甜水果風味，日常補充更輕鬆"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_0ca583e5-9a94-4ae5-828e-4f9fe434d5e9.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-precollagen-pregsh-formula-28"
+    },
+    {
+      "id": "wimacare-sustained-c-cap-60",
+      "benefit": "美妍透亮",
+      "name": "美極C 緩釋微粒膠囊",
+      "price": 880,
+      "packageSize": "90粒",
+      "diet": "純素",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "忙碌節奏與重視保養者打造的維生素C 高效補給！\n植化素複合 C × 12 小時分時緩釋，不靠瞬間爆發。",
+      "featurePoints": [
+        "左旋維生素 C 400 毫克，高單位抗氧化補給",
+        "生物類黃酮 × 橙皮苷，複方加乘",
+        "12 小時分時緩釋小球，延長營養補給時間",
+        "維生素 C 有助於促進膠原蛋白形成",
+        "維生素 C 有助於鐵質吸收，並維持細胞排列的緊密性"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_ce442cd0-db6f-455a-abf3-e2e02f6780b1.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-sustained-c-cap-60"
+    },
+    {
+      "id": "wimacare-nigella-plus-cap-60",
+      "benefit": "防護升級",
+      "name": "費淨康®精油複方軟膠囊",
+      "price": 1580,
+      "packageSize": "30粒",
+      "diet": "葷食",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "為通勤與密閉環境打造的清新植萃複方！\n黑種草籽油 × 藍桉 × 薄荷 × 高良薑，清新舒爽，維持好狀態。",
+      "featurePoints": [
+        "每粒含黑種草籽油 250 毫克，植萃油脂營養",
+        "每粒含藍桉葉精油 200 毫克，清新草本核心",
+        "薄荷精油 40 毫克，清涼舒爽氣息",
+        "高良薑精油 13 毫克，辛香植萃加乘",
+        "四重植物精油複方，多層次日常保養",
+        "軟膠囊可食用、外用或芳香使用"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_2ea9411e-ba52-4a4a-a741-cddce6bb2796.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-nigella-plus-cap-60"
+    },
+    {
+      "id": "wimacare-solugel-5000-36",
+      "benefit": "美妍透亮",
+      "name": "舒麗肽® 胜肽即溶膠原蛋白粉",
+      "price": 680,
+      "packageSize": "15包",
+      "diet": "葷食",
+      "salesChannel": "連鎖藥妝",
+      "featureLead": "身體的純粹補給！拒絕糖份、香料與多餘化學添加物。\n小分子活性胜肽 × 100% 膠原蛋白，即溶好吸收。\n為美麗保養與日常活動打造的純膠原補給！",
+      "featurePoints": [
+        "德國 SOLUGEL® 5000，高品質水解膠原蛋白胜肽",
+        "5000 道爾頓以下小分子，提升吸收利用",
+        "100% 純膠原蛋白，補充身體重要結構營養",
+        "低溫活性製程，保留膠原蛋白營養",
+        "非水產動物來源，無魚腥味",
+        "獨立隨身包，細緻粉末快溶，百搭冷熱飲品"
+      ],
+      "imageUrl": "https://cdn-general.cybassets.com/s/files/26548/ckeditor/pictures/content_267f39df-015b-4520-8d51-4ff12febc4d4.jpg",
+      "detailsUrl": "https://wimacare.cyberbiz.co/products/wimacare-solugel-5000-36"
+    }
+  ]
+}

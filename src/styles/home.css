@@ -399,8 +399,21 @@
   background: var(--brand-primary);
 }
 
-.home-brand-card.is-wine {
-  background: var(--brand-wine);
+.home-brand-card.is-vegan {
+  color: var(--brand-primary);
+  background: #6a9f49;
+}
+
+.home-brand-card.is-vegan h3 {
+  color: #ffffff;
+}
+
+.home-brand-card.is-vegan p {
+  color: #c9d1cd;
+}
+
+.home-brand-card.is-vegan a {
+  color: var(--brand-highlight);
 }
 
 .home-brand-card-top {
