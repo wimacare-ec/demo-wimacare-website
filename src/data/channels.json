@@ -5367,6 +5367,39 @@
       "photo": "",
       "description": "",
       "link": ""
+    },
+    {
+      "name": "佑家藥局",
+      "city": "新北市",
+      "district": "鶯歌區",
+      "address": "新北市鶯歌區中正三路151號",
+      "phone": "02-2679-8282",
+      "hasLocation": true,
+      "photo": "",
+      "description": "",
+      "link": ""
+    },
+    {
+      "name": "青埔萬藥局",
+      "city": "桃園市",
+      "district": "中壢區",
+      "address": "桃園市中壢區青埔里大成路一段17號",
+      "phone": "03-287-2919",
+      "hasLocation": true,
+      "photo": "",
+      "description": "",
+      "link": ""
+    },
+    {
+      "name": "正三吉藥局",
+      "city": "台中市",
+      "district": "中區",
+      "address": "台中市中區臺灣大道一段95號",
+      "phone": "04-2220-7700",
+      "hasLocation": true,
+      "photo": "",
+      "description": "",
+      "link": ""
     }
   ],
   "physicalDrugstore": [

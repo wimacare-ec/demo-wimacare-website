@@ -8,7 +8,7 @@ const channelGroups = [
     id: "community-pharmacy",
     label: "社區藥局",
     eyebrow: "COMMUNITY PHARMACY",
-    description: "透過在地社區藥局的專業服務，依日常保養需求選擇合適的威馬康健產品系列。",
+    description: "透過在地社區藥局的專業諮詢服務，依您的日常保養需求選擇合適的保健系列。",
     href: sitePath("/products-RX/"),
     products: [
       { pack: "VEGETARIAN CARE", title: "素食保健系列", description: "以「植萃營養，安心有效」為品牌理念，打造專業的素食保健食品", image: sitePath("/products/veg-RX.jpg"), series: "vegetarian" },
@@ -19,7 +19,7 @@ const channelGroups = [
     id: "chain-drugstore",
     label: "連鎖藥妝",
     eyebrow: "CHAIN DRUGSTORE",
-    description: "於連鎖藥妝通路瀏覽威馬康健素食與葷食保健系列，實際品項依各門店現場為準。",
+    description: "在連鎖藥妝通路也能購買到威馬康健的保健系列，實際品項依各門店現場為準。",
     href: sitePath("/products-PCS/"),
     products: [
       { pack: "VEGETARIAN CARE", title: "素食保健系列", description: "以「植萃營養，安心有效」為品牌理念，打造專業的素食保健食品", image: sitePath("/products/veg-KA.jpg"), series: "vegetarian" },
@@ -30,7 +30,7 @@ const channelGroups = [
 ---
 
 <BaseLayout title="產品介紹｜威馬康健" description="依社區藥局與連鎖藥妝通路瀏覽威馬康健素食及葷食保健系列。" pageClass="interior-page products-page">
-  <PageHero background eyebrow="OUR PRODUCTS" title="產品介紹" description="依販售通路瀏覽威馬康健產品系列；正式上線內容將補齊核准品名、規格、成分與注意事項。" />
+  <PageHero background eyebrow="OUR PRODUCTS" title="產品介紹" description="我們的保健系列滿足各年齡族群的多樣需求，基礎保養、成長發育、機能代謝、青春美麗、充沛活力等多樣功效。" />
   <section class="section product-channels" aria-label="產品販售通路">
     <div class="shell">
       {channelGroups.map((channel, index) => (
@@ -66,7 +66,7 @@ const channelGroups = [
         </section>
       ))}
 
-      <div class="notice"><strong>產品資訊聲明：</strong>本頁目前為網站架構與內容欄位示意，不構成醫療建議或功效保證。正式產品內容須經品牌、法務與法規審核後發布。</div>
+      <div class="notice"><strong>產品資訊聲明：</strong>授權通路所販售的商品項目，依各門店現場為準，建議前往選購時，可致電瞭解或洽詢線上客服。</div>
     </div>
   </section>
 </BaseLayout>

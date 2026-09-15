@@ -9,7 +9,7 @@ const entries = archivePageEntries(news, 1);
 const totalPages = totalArchivePages(news.length);
 ---
 <BaseLayout title="最新消息｜威馬康健" description="查看威馬康健官方聲明、產品新訊、媒體報導與近期活動。" pageClass="interior-page news-list-page">
-  <PageHero background eyebrow="NEWS & PRESS" title="最新消息" description="官方聲明、產品新訊、媒體報導與近期活動由 TinaCMS 管理；內容更新後會經 GitHub 與 Cloudflare 自動發布。" />
+  <PageHero background eyebrow="NEWS & PRESS" title="最新消息" description="您可以在本頁獲得最新動態訊息，涵蓋官方公告、產品新訊、媒體報導與近期活動。" />
   <section class="section"><div class="shell">
     <ArticleArchive entries={entries} categories={["官方聲明", "產品新訊", "媒體報導", "近期活動"]} basePath="/news" currentPage={1} totalPages={totalPages} summaryLabel="則消息" />
   </div></section>
