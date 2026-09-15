@@ -7,7 +7,7 @@ const endpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT || "https://formspree
   <div class="contact-page">
     <PageHero background eyebrow="CONTACT WIMA CARE" title="聯絡我們" description="依需求分類問題，讓產品、訂單、經銷、合作與其他需求更快交給正確窗口。" />
     <section class="section"><div class="shell contact-layout">
-    <aside class="contact-info"><p class="eyebrow">WE ARE HERE TO HELP</p><h2>有任何問題，<br />歡迎告訴我們。</h2><p>歡迎於服務時間透過電話、電郵或 LINE OA 與我們聯絡。</p><div class="contact-list"><p><b>客服電話</b><a href="tel:0800585853">0800-58-58-53</a></p><p><b>官方電郵</b><a href="mailto:wimacare.ec@gmail.com">wimacare.ec@gmail.com</a></p><p><b>服務時間</b><span>週一至週五 09:00–18:00</span></p><p><b>LINE OA</b><span>@wimacare</span></p></div></aside>
+    <aside class="contact-info"><p class="eyebrow">WE ARE HERE TO HELP</p><h2>有任何問題，<br />歡迎告訴我們。</h2><p>歡迎於服務時間透過電話、電郵或 LINE OA 與我們聯絡。</p><div class="contact-list"><p><b>客服電話</b><a href="tel:0800585853">0800-58-58-53</a></p><p><b>官方電郵</b><a href="mailto:wimacare.ec@gmail.com">wimacare.ec@gmail.com</a></p><p><b>服務時間</b><span>週一至週五 09:00–17:00</span></p><p><b>LINE OA</b><span>@wimacare</span></p></div></aside>
     <form class="contact-form" id="contact-form" action={endpoint} method="post"><p class="eyebrow">CONTACT FORM</p><h2>請選擇聯絡需求</h2><div class="form-grid">
       <div class="form-field full"><label for="topic">需求分類 *</label><select id="topic" name="topic" required><option value="">請選擇</option><option>成為零售夥伴</option><option>訂單問題</option><option>產品諮詢</option><option>合作提案</option><option>人才招募</option><option>意見反映</option><option>其他問題</option></select></div>
       <div class="form-field"><label for="name">姓名 *</label><input id="name" name="name" autocomplete="name" required /></div>
