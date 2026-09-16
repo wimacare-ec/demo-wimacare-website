@@ -30,7 +30,7 @@ const {
   </div>
   <p class="filter-summary" data-archive-summary aria-live="polite">本頁顯示 <strong>{entries.length}</strong> {summaryLabel}</p>
   <div class="news-grid" data-archive-grid>
-    {entries.map((entry) => <NewsCard entry={entry} basePath={basePath} />)}
+    {entries.map((entry) => <NewsCard entry={entry} basePath={basePath} ctaLabel="點我瞭解" />)}
   </div>
   <div class:list={["empty-state", { "is-visible": entries.length === 0 }]} data-archive-empty>{emptyMessage}</div>
   <Pagination basePath={basePath} currentPage={currentPage} totalPages={totalPages} />

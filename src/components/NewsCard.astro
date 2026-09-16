@@ -1,7 +1,7 @@
 ---
 import { sitePath } from "@/lib/site-path";
 
-const { entry, basePath = "/news" } = Astro.props;
+const { entry, basePath = "/news", ctaLabel = "閱讀文章" } = Astro.props;
 const publishedAt = entry.data.publishedAt;
 const date = `${publishedAt.getFullYear()}.${publishedAt.getMonth() + 1}.${publishedAt.getDate()}`;
 const href = sitePath(`${basePath}/${entry.id}/`);
@@ -12,5 +12,5 @@ const cover = sitePath(entry.data.cover || "/og.png");
   <h2><a href={href}>{entry.data.title}</a></h2>
   <time class="news-date" datetime={publishedAt.toISOString()}>{date}</time>
   <p>{entry.data.excerpt}</p>
-  <a class="news-cta" href={href} aria-label={`閱讀文章：${entry.data.title}`}>閱讀文章 →</a>
+  <a class="news-cta" href={href} aria-label={`${ctaLabel}：${entry.data.title}`}>{ctaLabel} →</a>
 </article>

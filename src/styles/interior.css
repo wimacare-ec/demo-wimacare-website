@@ -178,6 +178,21 @@
   content: "i";
 }
 
+.interior-page.dealer-page .notice,
+.interior-page.products-page .notice {
+  --notice-accent: #27a80e;
+  --notice-surface: #f3fff5;
+
+  border-color: var(--notice-accent);
+  border-left-color: var(--notice-accent);
+  background: var(--notice-surface);
+}
+
+.interior-page.dealer-page .notice::before,
+.interior-page.products-page .notice::before {
+  background: var(--notice-accent);
+}
+
 .interior-page .filter-bar {
   width: fit-content;
   max-width: 100%;
@@ -293,16 +308,17 @@
 
 .interior-page .news-cta {
   margin: auto 8px 0;
-  padding-top: 22px;
-  color: var(--brand-primary);
-  background: transparent;
-  font-size: 13px;
+  padding: 0 22px;
+  align-self: flex-end;
+  color: #fff;
+  background: var(--brand-primary);
+  font-size: 16px;
 }
 
 .interior-page .news-cta:hover {
-  color: var(--brand-ink);
-  background: transparent;
-  transform: translateX(4px);
+  color: #fff;
+  background: color-mix(in srgb, var(--brand-primary) 86%, var(--brand-ink));
+  transform: translateY(-2px);
 }
 
 /* Products */
@@ -1372,6 +1388,10 @@
 .interior-page .member-card span {
   color: var(--brand-ink);
   background: var(--brand-highlight);
+}
+
+.interior-page .eshop-cta {
+  font-size: 18px;
 }
 
 .interior-page .eshop-cta:hover {

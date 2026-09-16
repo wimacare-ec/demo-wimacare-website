@@ -141,7 +141,7 @@ const purchaseChannels = [
           </div>
           <a class="home-text-link" href={sitePath("/news/")}>查看全部消息 <span aria-hidden="true">→</span></a>
         </div>
-        <div class="news-grid">{news.map((entry) => <NewsCard entry={entry} />)}</div>
+        <div class="news-grid">{news.map((entry) => <NewsCard entry={entry} ctaLabel="點我瞭解" />)}</div>
       </div>
     </section>
 
@@ -154,7 +154,7 @@ const purchaseChannels = [
           </div>
           <a class="home-text-link" href={sitePath("/knowledge/")}>查看全部健康知識 <span aria-hidden="true">→</span></a>
         </div>
-        <div class="news-grid">{knowledge.map((entry) => <NewsCard entry={entry} basePath="/knowledge" />)}</div>
+        <div class="news-grid">{knowledge.map((entry) => <NewsCard entry={entry} basePath="/knowledge" ctaLabel="點我瞭解" />)}</div>
       </div>
     </section>
 

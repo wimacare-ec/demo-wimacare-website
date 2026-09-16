@@ -633,6 +633,7 @@
 }
 
 .home-news .news-cta {
+  align-self: flex-end;
   color: #fff;
   background: var(--brand-primary);
 }
