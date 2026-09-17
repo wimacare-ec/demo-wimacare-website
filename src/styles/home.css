@@ -693,7 +693,8 @@
 
 .home-purchase-logo img {
   width: 100%;
-  aspect-ratio: 15 / 8;
+  aspect-ratio: 2 / 1;
+  display: block;
   object-fit: cover;
   border: 1px solid color-mix(in srgb, var(--brand-accent) 25%, transparent);
   border-radius: 22px;

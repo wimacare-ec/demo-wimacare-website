@@ -26,6 +26,14 @@ const socialImage = new URL(image.startsWith("/") ? sitePath(image) : image, Ast
 <!doctype html>
 <html lang="zh-Hant">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-L52HTW1WCS"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L52HTW1WCS');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
