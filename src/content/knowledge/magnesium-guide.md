@@ -3,7 +3,7 @@ title: 鎂的功效與補充指南
 category: 成分功效
 publishedAt: 2026-09-20T03:03:50.781Z
 excerpt: 從生理功能、食物來源到補充安全一次看懂
-draft: true
+draft: false
 ---
 
 # 鎂的功效與補充指南
