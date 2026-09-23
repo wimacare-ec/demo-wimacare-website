@@ -1,15 +1,18 @@
 ---
-title: 認識NMN
+title: NMN介紹，如何補充？食物來源與正確吃法全整理
 category: 成分功效
 publishedAt: 2026-08-25T09:00:00.000Z
-excerpt: ' 認識NMN，從 NAD+ 前驅物到人體研究，了解功效界線、食用注意事項與挑選方法'
+excerpt: ' 認識NMN，從 NAD+ 前驅物到人體研究，了解功效界線、食用注意事項與挑選方法　'
+cover: /uploads/blog-NMN-guide.jpg
 draft: false
 seo:
   title: NMN健康知識完整指南
   description: 認識NMN，從 NAD+ 前驅物到人體研究，了解功效界線、食用注意事項與挑選方法
 ---
 
-# NMN功效與安全性完整指南
+# NMN介紹，如何補充？食物來源與挑選指南
+
+![](/uploads/blog-NMN-guide.jpg)
 
 **從 NAD+ 前驅物到人體研究，了解功效界線、食用注意事項與挑選方法**
 
@@ -181,4 +184,4 @@ NMN是具有生物學研究基礎的 NAD+ 前驅物，短期人體試驗對提�
 6. Irie J, et al. Safety evaluation of beta-nicotinamide mononucleotide oral administration in healthy adult men and women. *Scientific Reports*. 2022;12:14442. PMID: 36002548.
 7. 衛生福利部食品藥物管理署 - 國產維生素類錠狀膠囊狀食品手冊與食品原料整合查詢平台 (產品原料與標示應以查詢當下最新公告為準)。
 
-> 本文為一般健康教育內容，不能取代個別診斷、治療或用藥建議。
+> **健康提醒**：本文提供一般營養與健康教育資訊，不能取代個別診斷或治療。若有慢性病、長期用藥、懷孕哺乳、檢驗異常或持續症狀，請諮詢醫師、藥師或營養師。

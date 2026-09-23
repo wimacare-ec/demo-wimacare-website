@@ -1535,6 +1535,14 @@
   margin-bottom: 0;
 }
 
+/* Give long-form articles additional desktop reading width. */
+@media (min-width: 981px) {
+  .news-article-page .article-shell,
+  .knowledge-article-page .article-shell {
+    width: min(936px, calc(100% - 48px));
+  }
+}
+
 .interior-page .privacy-copy {
   padding: clamp(32px, 6vw, 70px);
   border: 1px solid color-mix(in srgb, var(--brand-primary) 12%, transparent);

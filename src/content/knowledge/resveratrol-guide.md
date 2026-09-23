@@ -1,15 +1,18 @@
 ---
-title: 白藜蘆醇健康知識指南
+title: 白藜蘆醇介紹，如何補充？食物來源與正確吃法全整理
 category: 成分功效
 publishedAt: 2026-08-28T13:00:00.000Z
 excerpt: 白藜蘆醇是葡萄皮、莓果與花生等植物中的多酚化合物。它在細胞與動物研究中展現抗氧化、調節發炎與代謝相關作用
+cover: /uploads/blog-resveratrol-guide.jpg
 draft: false
 seo:
-  title: 白藜蘆醇健康知識指南
+  title: 白藜蘆醇介紹，如何補充？食物來源與正確吃法全整理
   description: 白藜蘆醇功效證據、食物來源、補充方式與安全提醒
 ---
 
 # 白藜蘆醇健康知識指南
+
+![](/uploads/blog-resveratrol-guide.jpg)
 
 **功效證據、食物來源、補充方式與安全提醒**
 
@@ -116,3 +119,5 @@ seo:
 5. Farzaei and colleagues - Effects and safety of resveratrol supplementation in older adults
 6. Marx and colleagues - Effect of resveratrol supplementation on cognitive performance and mood
 7. World Health Organization - No level of alcohol consumption is safe for our health
+
+> **健康提醒**：本文提供一般營養與健康教育資訊，不能取代個別診斷或治療。若有慢性病、長期用藥、懷孕哺乳、檢驗異常或持續症狀，請諮詢醫師、藥師或營養師。

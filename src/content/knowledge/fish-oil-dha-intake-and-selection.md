@@ -1,15 +1,18 @@
 ---
-title: 魚油 Omega 3 功效與補充指南
+title: 認識魚油 Omega 3，如何補充？有效補充指南
 category: 成分功效
 publishedAt: 2026-08-28T10:00:00.000Z
 excerpt: 魚油內的 Omega 3 從 EPA 與 DHA 的作用到攝取方式、選購重點與安全提醒
+cover: /uploads/blog-fish-oil-guide.jpg
 draft: false
 seo:
   title: 魚油怎麼吃？魚油 Omega 3 功效與補充指南
   description: 魚油Omega 3 從 EPA 與 DHA 的作用到攝取方式、選購重點與安全提醒
 ---
 
-# 魚油 Omega 3 功效與補充指南
+## 魚油 Omega 3 功效與補充指南
+
+![](/uploads/blog-fish-oil-guide.jpg)
 
 **從 EPA 與 DHA 的作用到攝取方式、選購重點與安全提醒**
 
@@ -149,3 +152,5 @@ Omega 3 會參與發炎相關訊號。部分特定疾病研究觀察到症狀或
 3. 美國國家衛生院膳食補充品辦公室 - Omega 3 Fatty Acids Fact Sheet for Health Professionals
 4. 歐洲食品安全局（EFSA） - Dietary Reference Values for Nutrients Summary Report
 5. 美國食品藥物管理局（FDA） - EPA and DHA Qualified Health Claim Safety Review
+
+> **健康提醒**：本文提供一般營養與健康教育資訊，不能取代個別診斷或治療。若有慢性病、長期用藥、懷孕哺乳、檢驗異常或持續症狀，請諮詢醫師、藥師或營養師。
