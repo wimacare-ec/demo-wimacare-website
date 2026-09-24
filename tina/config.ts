@@ -7,6 +7,16 @@ const branch =
   process.env.CF_PAGES_BRANCH ||
   "main";
 
+const createEmptyRichText = () => ({
+  type: "root",
+  children: [
+    {
+      type: "p",
+      children: [{ type: "text", text: "" }],
+    },
+  ],
+});
+
 export default defineConfig({
   branch,
   clientId: process.env.PUBLIC_TINA_CLIENT_ID || "",
@@ -43,6 +53,7 @@ export default defineConfig({
           publishedAt: new Date().toISOString(),
           featured: false,
           draft: true,
+          body: createEmptyRichText(),
         }),
         fields: [
           {
@@ -126,6 +137,7 @@ export default defineConfig({
           category: "保健新知",
           publishedAt: new Date().toISOString(),
           draft: true,
+          body: createEmptyRichText(),
         }),
         fields: [
           {
