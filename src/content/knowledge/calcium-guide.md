@@ -1,5 +1,5 @@
 ---
-title: 日常有效補充鈣質的飲食指南
+title: 日常補充鈣質的飲食指南
 category: 飲食指南
 publishedAt: 2026-08-31T09:00:00.000Z
 excerpt: |
