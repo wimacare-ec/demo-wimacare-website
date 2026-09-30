@@ -4,7 +4,7 @@ category: 近期活動
 publishedAt: 2026-08-25T09:00:00.000Z
 excerpt: 立即申請威馬康健的試用包，完整體驗！定期開放限量索取與優先試用機會，助您安心感受優質保健食品。
 featured: true
-draft: false
+draft: true
 seo:
   title: 免費索取試用體驗包｜威馬康健
   description: 立即申請威馬康健試用體驗包，瞭解申請條件、試用內容與寄送說明。
